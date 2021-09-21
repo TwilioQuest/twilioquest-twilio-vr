@@ -4,7 +4,7 @@ module.exports = async helper => {
     const messages = await client.messages.list({ limit: 100 });
     const found = messages.find(
       msg =>
-        msg.direction === 'outbound-reply' &&
+        (msg.direction === 'outbound-reply' || msg.direction === 'outbound-api') &&
         msg.body.toLowerCase().includes('twilioquest rules')
     );
     if (!found) {
