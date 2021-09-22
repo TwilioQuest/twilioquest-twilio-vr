@@ -2,7 +2,7 @@ module.exports = (helper, callback) => {
   const phoneNumber = helper.getNormalizedInput('phoneNumber');
 
   if (!phoneNumber) {
-    return helper.fail(`Please provide a phone number in your account.`);
+    return helper.fail(`アカウントに電話番号をご記入ください。`);
   }
 
   let c;
@@ -15,8 +15,7 @@ module.exports = (helper, callback) => {
 
   function respondWithError() {
     helper.fail(`
-      We couldn't find your phone number - please try again, and make sure 
-      your phone number and Twilio credentials are correct.
+      電話番号が見つかりなかった。 もう一度お試しください。　また、電話番号とTwilioの資格情報が正しいことを確認してください。
     `);
   }
 
@@ -31,8 +30,8 @@ module.exports = (helper, callback) => {
         found = true;
         return helper.success(
           `
-            Awesome! We found this Twilio phone number in your account. 
-            We'll remember this number and use it in future challenges.
+            いいね。アカウントにこのTwilioの電話番号が見つかった。 
+            この番号を覚えておいて、今後のチャレンジで使用する。
           `,
           [
             { name: 'TWILIO_NUMBER', value: response[0].phoneNumber },

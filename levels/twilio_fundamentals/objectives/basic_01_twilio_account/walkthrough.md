@@ -1,27 +1,27 @@
-# Twilio Account Setup
+# Twilioのアカウント設定
 
-The objective here is to [acquire a Twilio account](https://www.twilio.com/try-twilio?utm_source=twilioquest-3) and locate the account credentials you will need to interact with Twilio. These credentials will be stored locally on your computer by TwilioQuest. They will be used to validate and speed your progress through Twilio-related code challenges.
+この目的は[Twilioアカウントを取得して](https://www.twilio.com/try-twilio?utm_source=twilioquest-3)Twilioとの連携のために必要な資格情報を見つける。この資格情報はTwilioQuestによってコンピュータにローカルに保存される。Twilio関連 コードチャレンジの進捗状況を検証され、スピードアップするのために使用される。
 
-## Getting your account credentials
+## アカウントの資格情報の取得
 
-Once you have [signed up for a Twilio account](https://www.twilio.com/try-twilio?utm_source=twilioquest-3), you will find your Twilio account credentials on [your Console home page](https://www.twilio.com/console).
+[Twilioアカウントをサインアップ](https://www.twilio.com/try-twilio?utm_source=twilioquest-3)したの後、[コンソールホームページ](https://www.twilio.com/console)にTwilioのアカウントの資格情報が掲載されている。
 
 <center>
 <img src="images/basic_training/account-sid-auth-token.png" />
 </center>
 
-You might be wondering what these values are, and what they are used for.
+この値が何、使用されることも何疑問に思っているかもしれない。
 
-- **Twilio Account SID:** A unique identifier for your Twilio account, encapsulating a collection of [phone numbers](https://www.twilio.com/console/phone-numbers/incoming), [caller IDs](https://www.twilio.com/console/phone-numbers/verified), [messaging services](https://www.twilio.com/console/sms/services), and myriad other resources related to Twilio API usage.
-- **Twilio Auth Token:** A password for API access to your Twilio account. Be careful with this value, and do not make the common error of committing it to a [version control system](https://en.wikipedia.org/wiki/Version_control).
+- **Twilio Account SID:** [電話番号](https://www.twilio.com/console/phone-numbers/incoming),[発信者番号通知](https://www.twilio.com/console/phone-numbers/verified),[メッセージングサービス](https://www.twilio.com/console/sms/services),TwilioのAPIの使用に関連する色々なリソースの集合体で構成されるTwilioのアカウントのユニークな識別子。
+- **Twilio Auth Token:** TwilioのアカウントへのAPIアクセス用のパスワード。この値の取り扱いに注意が必要で、[バージョンコントロールシステム](https://ja.wikipedia.org/wiki/バージョンコントロールシステム)にコミットすることのよくある間違いを犯さないでください。
 
-You will use these values together as a username and password for accessing the [Twilio REST APIs](https://www.twilio.com/docs).
+その二つの値を[Twilio REST APIs](https://www.twilio.com/docs)へのアクセスのためにユーザーネームとパスワードとして一緒に使用する。
 
-## Notes on account security
+## アカウントのセキュリティに関する注意
 
-We do not recommend using credentials for a Twilio account used by your own production applications in TwilioQuest. While our validation and automation code are designed to be as unobtrusive as possible, granting TwilioQuest access to your production API credentials could have unforeseen consequences. Consider [creating a new project](https://www.twilio.com/console/projects/create) to use with TwilioQuest specifically.
+自社の本番アプリケーションで使用しているTwilioアカウントの認証情報をTwilioQuestで使用することはお勧めしません。弊社の検証と自動化コードは、可能な限り目立たないように設計されているけど、TwilioQuestに自分の本番APIの資格情報へのアクセスをさせると、予期せぬ結果になることもある。TwilioQuestに特化して使用するために、[新しいプロジェクトを作成すること](https://www.twilio.com/console/projects/create)を検討した方がいい。
 
-The API credentials you provide for TwilioQuest to use can be edited in the **Settings** menu after successfully validating them. You can change or erase them at any time. Open the **Settings** menu while exploring by pressing the *O* key, or clicking on the **Settings** icon on the HUD bar at the top of the screen.
+TwilioQuestが使用するために提供したAPI資格情報は、検証の成功した後、**設定**メニューで編集することができる。資格情報はいつでも変更・消去することができる。探索中に*O*キーを押すとか、画面上部のHUDバーにある**設定**アイコンをクリックして**設定**メニューを開きる。
 
-## Clearing the barrier
-Enter both your Twilio account SID and auth token in the text fields to your right, and press the *HACK* button. Your credentials will be validated, and if they are correct, you will have prevailed in this challenge.
+## 障壁をクリアする
+右側のテキストフィールドにTwilioアカウントのSIDとauth tokenの両方を入力し、*HACK*のボタンを押す。資格情報が検証され、それが正しければ、このチャレンジに勝利したことになる。

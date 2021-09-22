@@ -1,29 +1,29 @@
-# Getting a programmable phone number
+# プログラム可能な電話番号の取得
 
-Navigate to the [phone number management interface](https://www.twilio.com/console/phone-numbers/incoming) in the Twilio console. You may use a phone number in this list to complete this challenge. Click the *+* button to purchase a phone number.
+Twilioコンソールの[電話番号管理インターフェース](https://www.twilio.com/console/phone-numbers/incoming)に移動する。 このリストにある電話番号を使って、この課題をクリアすしてもいい。 電話番号を購入するために、*+*ボタンをクリックする。
 
 <center>
 <img src="images/basic_training/buy-number.png"/>
 </center>
 
-Search for a phone number in the country or area code you prefer. Note that while it is possible to **deliver** SMS messages to nearly any mobile phone on the planet, Twilio does not have **local** phone numbers to use for SMS delivery in every country.
+希望の国や市外局番の電話番号を検索する。 地球上のほぼすべての携帯電話にSMSメッセージを**配信**することは可能ですが、Twilioはすべての国でSMS配信に使用できる**現地**の電話番号を持っているわけではない。
 
-When you click "Search", you will see a list of available phone numbers. Choose one that is capable of sending and receiving SMS messages:
+「検索」をクリックすると、利用可能な電話番号のリストが表示される。SMSメッセージの送受信が可能なものを選ぶ。
 
 <center>
 <img src="images/basic_training/search-for-number.png"/>
 </center>
 
-When you buy the phone number, you'll notice that doing so will debit some amount from your Twilio account (using either trial credits or your real funds) on a monthly basis. Remember that for new Twilio accounts, you can use the promo code `TWILIOQUEST` for \$50 USD of free API credits. You can upgrade your account and use this promo code [in the Billing section of the console](https://www.twilio.com/console/billing).
+電話番号を購入すると、お客様のTwilioアカウントから毎月いくらかの金額が引き落とされることになります（トライアルクレジットまたは実際の資金を使用）。新規Twilioアカウントの場合、プロモコード「TWILIOQUEST」をご利用いただくと、USD50の無料APIクレジットをご利用もらえる。 [コンソールのBillingセクション](https://www.twilio.com/console/billing)でこのプロモコードを使用して、アカウントをアップグレードできる。
 
-Please note, however, that you can complete TwilioQuest using only your free trial account. [Trial accounts have some restrictions](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-), but should work just fine as you learn the API in TwilioQuest.
+ただし、TwilioQuestは、無料トライアルアカウントのみで完結する。 [トライアルアカウントにはいくつかの制限がある](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-)けど、TwilioQuestのAPIを習得しながら問題なく利用もらえる。
 
-Having obtained a programmable phone number, you are ready to take on many of the Twilio-related challenges in TwilioQuest!
+プログラム可能な電話番号を手に入れたのあと、TwilioQuestでTwilioにまつわる様々な課題に挑戦する準備ができている。
 
-## Clearing the barrier
+## 障壁をクリアする
 
-Choose an SMS-capable phone number from [your inventory](https://www.twilio.com/console/phone-numbers/incoming). This can be an existing phone number in your account, or a new one that you just purchased. Enter the phone number into the text field on the right.
+SMSに対応した電話番号を[在庫](https://www.twilio.com/console/phone-numbers/incoming)から選ぶ。これは、アカウントに登録されている既存の電話番号でも、購入したばかりの新しい電話番号でも構いない。右側のテキストフィールドに電話番号を入力する。
 
-Phone numbers should be entered in [E.164 format](https://www.twilio.com/docs/glossary/what-e164) - you should plan on using this format when working with phone numbers in your Twilio apps and code going forward. The validator will only accept phone numbers in this format! For example, the US phone number "(651) 867-5309" would need to be entered as `+16518675309`.
+電話番号は[E.164形式](https://www.twilio.com/docs/glossary/what-e164)で入力したほうがいい。今後、Twilioアプリやコードで電話番号を扱う際には、この形式を使用することを予定してください。バリデータはこの形式の電話番号しか受け付けない。例えば、米国の電話番号「(651) 867-5309」は、「+16518675309」と入力する必要がある。
 
-When you click `HACK`, TwilioQuest will verify that this phone number is owned by your Twilio account. TwilioQuest will store this number for use in future challenges.
+「HACK」をクリックすると、TwilioQuestはこの電話番号がこのTwilioアカウントで所有されていることを確認する。TwilioQuestは、今後のチャレンジで使用するためにこの番号を保存する。

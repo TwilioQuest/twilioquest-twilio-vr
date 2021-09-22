@@ -1,5 +1,5 @@
-# Put the Keys in the Ignition
+# イグニションに鍵を入れる
 
-Programming challenges that use Twilio APIs require a Twilio account. [Acquire a Twilio account](https://www.twilio.com/try-twilio?utm_source=twilioquest-3) and locate your API credentials (called your **account SID** and **auth token**). These credentials can be found on [your Console home page](https://www.twilio.com/console).
+TwilioのAPIを使用するプログラミングチャレンジはTwilioのアカウントが必要です。[Twilioアカウントを取得して](https://www.twilio.com/try-twilio?utm_source=twilioquest-3)**account SID**と**auth token**というAPIの資格情報を見つける。その情報は[コンソールホームページ](https://www.twilio.com/console)に掲載されている。
 
-Enter both values in the text fields on the right, and click the *HACK* button. Your credentials will be validated and stored by TwilioQuest to use in future Twilio-related challenges.
+右側のテキストフィールドに両方の値 を入れて 「HACK」 のボタンをクリックする. 資格情報は TwilioQuest に今後の Twilio関連 チャレンジで 使用することのために検証され、保存される。

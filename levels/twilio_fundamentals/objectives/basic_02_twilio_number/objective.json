@@ -1,12 +1,12 @@
 {
-  "title": "Twilio Fundamentals: Get a Number",
-  "description": "Using the Twilio console, obtain a programmable phone number.",
+  "title": "Twilioの基礎知識。電話番号の取得",
+  "description": "Twilioコンソールを使って、プログラム可能な電話番号を取得する。",
   "validation_fields": [
     {
       "name": "phoneNumber",
       "type": "text",
       "placeholder": "+16518675309",
-      "label": "Enter your Twilio phone number, in E.164 format:"
+      "label": "Twilioの電話番号をE.164形式で入力する。"
     }
   ],
   "rewards": {
