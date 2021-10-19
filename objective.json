@@ -1,0 +1,16 @@
+{
+  "title": "メッセージングの基礎知識： <Redirect>タグ",
+  "description": "メッセージの制御を別のURLに移すには、TwiMLの<strong>&lt;Redirect&gt;</strong> タグを使います。",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "目的に沿ってTwilioの番号を設定し、「HACK」のボタンをクリックする。"
+    }
+  ],
+  "rewards": {
+    "xp": 150
+  }
+}
