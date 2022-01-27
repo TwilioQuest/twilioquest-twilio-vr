@@ -1,0 +1,16 @@
+{
+  "title": "Programmable Voice: Olá, mundo!",
+  "description": "Atenda uma chamada telefônica e use texto em voz para dizer “Alô”.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Configure seu número Twilio conforme indicado no objetivo e clique no botão “HACK” para validar."
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

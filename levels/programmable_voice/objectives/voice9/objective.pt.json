@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: Reúna a fala",
+  "description": "Reúna a fala em uma chamada",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Reúna um pouco de fala e, em seguida, pressione o bom e velho botão HACK"
+    }
+  ],
+  "rewards": {
+    "xp": 0,
+    "items": [
+      "bunny_mask"
+    ]
+  }
+}

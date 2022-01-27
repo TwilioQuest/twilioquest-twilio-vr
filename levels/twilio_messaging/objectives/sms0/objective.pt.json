@@ -1,0 +1,16 @@
+{
+  "title": "Fundamentos das mensagens: Envie uma mensagem de texto",
+  "description": "Envie sua primeira mensagem SMS usando a API da Twilio.",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "messageSid",
+      "type": "text",
+      "placeholder": "SMXXXX",
+      "label": "Insira o SID da mensagem de uma mensagem enviada de sua conta:"
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Configuração da API Twilio: Credenciais da conta",
+  "description": "Permita que o TwilioQuest valide seu progresso para os desafios da API Twilio usando suas credenciais da conta da Twilio.",
+  "validation_fields": [
+    {
+      "name": "accountSid",
+      "type": "text",
+      "placeholder": "ACxxx",
+      "label": "Seu SID da conta da Twilio:"
+    },
+    {
+      "name": "authToken",
+      "type": "password",
+      "placeholder": "",
+      "label": "Seu token de autenticação da Twilio:"
+    }
+  ],
+  "rewards": {
+    "xp": 200,
+    "items": [
+      "operator_armor_body",
+      "operator_armor_boots"
+    ]
+  }
+}

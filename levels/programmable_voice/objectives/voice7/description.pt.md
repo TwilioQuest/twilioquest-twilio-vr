@@ -1,0 +1,5 @@
+# Rodada de \<Gather>
+
+Use a tag `<Gather>` ([docs](https://www.twilio.com/docs/voice/twiml/gather)) (documentos) para coletar a entrada do usuário por meio de tons [DTMF](https://www.twilio.com/docs/glossary/what-is-dtmf) (tons de toque do teclado). Depois de coletar a entrada, o TwiML retornado pelo URL `action` para sua tag `<Gather>` deve então **repeat back** (repetir) os `Digits` que foram inseridos pelo usuário em uma tag `<Say>`.
+
+O código que implementa esse comportamento foi fornecido para você no **editor de código**. Pressione <em><i class="fa fa-play"></i></em> no editor para executar o aplicativo. Você também pode concluir esse desafio com Functions, TwiML Bins ou seu próprio código. Apenas certifique-se de que [seu número de telefone está configurado](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID ? env.TQ_TWILIO_NUMBER_SID.value : '' %>) para usar o URL adequado.

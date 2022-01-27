@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: Manipuladores de Fallback",
+  "description": "Configure um manipulador de fallback caso seu manipulador principal falhe.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Configure o manipulador de fallback do número Twilio para voz e clique em “HACK” para validá-lo."
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": [
+      "unicorn_horn"
+    ]
+  }
+}

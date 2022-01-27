@@ -1,0 +1,16 @@
+{
+  "title": "Programmable Voice: Coletar informações com <Gather>",
+  "description": "Colete a entrada do usuário durante uma chamada com os tons de toque enviados por cabo ao pressionar as teclas do autor da chamada.",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Configure seu número de telefone conforme indicado no objetivo e pressione “HACK” para validar."
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

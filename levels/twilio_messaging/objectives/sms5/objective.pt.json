@@ -1,0 +1,18 @@
+{
+  "title": "Fundamentos das mensagens: Responda com um TwiML Bin",
+  "description": "Responder a uma mensagem SMS recebida usando um TwiML Bin",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Depois de configurar o número TwilioQuest para responder a mensagens recebidas usando um TwiloML Bin, clique no botão “HACK”."
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": [
+      "2_and_a_half_hearts"
+    ]
+  }
+}

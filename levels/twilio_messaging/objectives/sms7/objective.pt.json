@@ -1,0 +1,15 @@
+{
+  "title": "Fundamentos das mensagens: Responda com uma função do Twilio",
+  "description": "Configure uma função do Twilio para responder a um SMS recebido.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Configure seu número Twilio conforme indicado no objetivo e clique em “HACK” para validar."
+    }
+  ],
+  "rewards": {
+    "xp": 250
+  }
+}

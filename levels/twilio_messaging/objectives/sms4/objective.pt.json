@@ -1,0 +1,16 @@
+{
+  "title": "Fundamentos das mensagens: Configurar um manipulador de fallback",
+  "description": "Configure um fallback primário para SMS, por garantia.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Configure seu número Twilio conforme indicado no objetivo e clique no botão “HACK” para validar."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

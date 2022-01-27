@@ -1,0 +1,25 @@
+{
+  "title": "Fundamentos das mensagens: Retornos de chamada de status",
+  "description": "Configurar retornos de chamada de status para rastrear a entrega de mensagens.",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "messageSid",
+      "type": "text",
+      "placeholder": "SMXXXX",
+      "label": "Digite o SID da sua mensagem."
+    },
+    {
+      "name": "lastStatus",
+      "type": "text",
+      "placeholder": "some_status",
+      "label": "Insira o último status recebido e impresso no console:"
+    }
+  ],
+  "rewards": {
+    "xp": 250,
+    "items": [
+      "short_message_sabre"
+    ]
+  }
+}

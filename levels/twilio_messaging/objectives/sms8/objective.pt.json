@@ -1,0 +1,16 @@
+{
+  "title": "Fundamentos das mensagens: A Tag <Redirecionar>",
+  "description": "Use a tag TwiML <strong>&lt;Redirecionar&gt;</strong> para transferir o controle de uma mensagem para um URL diferente.",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Configure seu número Twilio conforme instruído no objetivo e clique no botão “HACK”."
+    }
+  ],
+  "rewards": {
+    "xp": 150
+  }
+}

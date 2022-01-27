@@ -1,0 +1,7 @@
+# O mundo está chamando – Diga Olá
+
+Sua primeira tarefa com a [Programmable Voice API](https://www.twilio.com/docs/voice) será \[configurar seu número da Twilio](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID ? env.TQ_TWILIO_NUMBER_SID.value : '' %>) para responder à chamadas recebidas. Quando seu número recebe uma chamada, a Twilio envia uma solicitação HTTP para um URL que você \[especifica na página de configuração do número de telefone](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID ? env.TQ_TWILIO_NUMBER_SID.value : '' %>). Esse URL deve então retornar o [TwiML](https://www.twilio.com/docs/voice/twiml) em resposta que fornece instruções da Twilio sobre como lidar com a chamada recebida.
+
+Neste objetivo, use um [TwiML Bin](https://www.twilio.com/console/twiml-bins) para criar um TwiML que use a tag TwiML `<Say>` ([documentos](https://www.twilio.com/docs/voice/twiml/say)) para dizer a frase `"Hello World!"` para o autor da chamada. \[Configure seu número da Twilio](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID ? env.TQ_TWILIO_NUMBER_SID.value : '' %>) para usar este bin TwiML para atender chamadas recebidas.
+
+Quando você perceber, já estará dizendo olá para alguns pontos de experiência!

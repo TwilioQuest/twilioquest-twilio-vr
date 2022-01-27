@@ -1,0 +1,16 @@
+{
+  "title": "Programmable Voice: Junção da função",
+  "description": "Crie uma função sem servidor para executar código dinâmico com base no prefixo de um autor da chamada",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prefix",
+      "type": "text",
+      "placeholder": "+1555",
+      "label": "Insira o prefixo que você está verificando em sua função:"
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

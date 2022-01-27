@@ -1,0 +1,19 @@
+{
+  "title": "Fundamentos das mensagens: Responda aos SMSs recebidos",
+  "description": "Use webhooks e TwML para responder a uma mensagem SMS recebida.",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "testPrompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Depois de responder a um SMS recebido com o texto “regras do TwilioQuest”, pressione o botão HACK para validar."
+    }
+  ],
+  "rewards": {
+    "xp": 200,
+    "items": [
+      "3_hearts"
+    ]
+  }
+}

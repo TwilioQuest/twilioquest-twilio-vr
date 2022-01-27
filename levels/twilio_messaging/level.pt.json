@@ -1,0 +1,27 @@
+{
+  "title": "API de mensagens da Twilio",
+  "description": "Saiba como enviar e receber mensagens SMS e MMS da sua conta Twilio.",
+  "is_mission": true,
+  "priority": 2,
+  "backgroundMusic": "hackertheme_104771b",
+  "mission_icon": "messaging_icon.png",
+  "prereqs": [
+    "basic_training.basic4"
+  ],
+  "backgroundEffect": {
+    "key": "vr",
+    "options": {}
+  },
+  "flavorTextOverrides": {},
+  "objectives": [
+    "sms0",
+    "sms1",
+    "sms2",
+    "sms3",
+    "sms4",
+    "sms5",
+    "sms6",
+    "sms7",
+    "sms8"
+  ]
+}

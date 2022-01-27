@@ -1,0 +1,16 @@
+{
+  "title": "Fundamentos das mensagens: Encaminhar um SMS para outro número",
+  "description": "Use o atributo “para” e o modelo em um TwigML Bin para encaminhar uma mensagem recebida para um número diferente.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Modifique o TwiliML Bin que você está usando para responder a mensagens do número Twilio, conforme instruído, e clique em “HACK”."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

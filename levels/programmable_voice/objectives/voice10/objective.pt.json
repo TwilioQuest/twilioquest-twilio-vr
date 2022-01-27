@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: Encaminhar chamadas com <Dial>",
+  "description": "Encaminhar uma chamada para outro número usando a tag &lt;Dial&gt;.",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Quando tiver configurado o número Twilio conforme indicado no objetivo, clique no botão “HACK”."
+    }
+  ],
+  "rewards": {
+    "xp": 200,
+    "items": [
+      "doggo_side_kick"
+    ]
+  }
+}

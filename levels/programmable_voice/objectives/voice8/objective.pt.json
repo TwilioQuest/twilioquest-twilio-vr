@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: Limitar entrada para <Gather>",
+  "description": "",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Limite os dígitos coletados e, em seguida, HACK!"
+    }
+  ],
+  "rewards": {
+    "xp": 0,
+    "items": [
+      "3_hearts"
+    ]
+  }
+}

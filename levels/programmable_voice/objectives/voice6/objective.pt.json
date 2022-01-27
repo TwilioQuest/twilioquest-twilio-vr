@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: Modelos no TwigML Bins",
+  "description": "Crie um TwML Bin que use modelos Mustache para espalhar um comportamento dinâmico no seu TwiML.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Configure seu número Twilio conforme indicado no objetivo e clique no botão “HACK”."
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": [
+      "gauntlet_of_empowerment"
+    ]
+  }
+}
