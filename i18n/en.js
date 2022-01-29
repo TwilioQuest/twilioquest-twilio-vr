@@ -55,7 +55,7 @@ module.exports = {
   "twilio_vr.voice3.validator.success": "Awesome job! Awesome job!",
   "twilio_vr.voice4.validator.error.playVerb": "Whoops you need to use the Play verb in your TwiML wired up to {phoneNumberLink}!",
   "twilio_vr.voice4.validator.error.urlInclude": "Please make sure you include a url in your Play verb",
-  "twilio_vr.voice4.validator.error.invalidAudioFile": "Oh no, please link to a valid audio file. {audioUrl} returned a {response.status}.",
+  "twilio_vr.voice4.validator.error.invalidAudioFile": "Oh no, please link to a valid audio file. {audioUrl} returned a {responseStatus}.",
   "twilio_vr.voice4.validator.success": "You did it! We knew you would never give us up, or let us down.",
   "twilio_vr.voice4.validator.error.notAudioFile": "Oh no, it looks like {audioUrl} is not an audio file. It is of type '{contentType}'",
   "twilio_vr.voice5.validator.error.invalidPrefix": `Please enter the prefix you are checking for, including the leading '+' 

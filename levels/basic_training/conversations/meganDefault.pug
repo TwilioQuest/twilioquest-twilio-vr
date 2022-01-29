@@ -9,25 +9,25 @@ conversation(display_name="Megan")
       statement#megan
       responses
         response#nice_to_meet.
-          Nice to meet you!
+          !{getTranslatedString('twilio_vr.cedric.nice_to_meet')}
         response#you_seem_nice.
-          You seem nice!
+          !{getTranslatedString('twilio_vr.cedric.you_seem_nice')}
 
     default
       statement#default
       responses
         response#who_are_you.
-          Hello, who are you?
+          !{getTranslatedString('twilio_vr.cedric.who_are_you')}
 
   statements
     statement#default
       text.
-        Welcome aboard the #[span.highlight Fog Owl!]
+        !{getTranslatedString('twilio_vr.cedric.textDefault')}
       speech.
-        Welcome aboard the #[break(strength="medium")] Fog Owl!
+        !{getTranslatedString('twilio_vr.cedric.speechDefault')}
     statement#megan
       text.
-        Hi there! My name is Megan.
+        !{getTranslatedString('twilio_vr.megan.megan')}
     statement#final
       text.
-        Thank you!
+        !{getTranslatedString('twilio_vr.corey.final')}

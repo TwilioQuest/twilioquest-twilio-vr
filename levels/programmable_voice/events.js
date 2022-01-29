@@ -1,6 +1,5 @@
 const levelInfo = require('./level.json');
 const LEVEL = 'programmable_voice';
-const TITLE = 'VR Training: Twilio Voice';
 
 module.exports = function(event, world) {
   let levelComplete = true, description = '';
@@ -12,15 +11,10 @@ module.exports = function(event, world) {
   }
 
   if (levelComplete) {
-    description = `
-      You have demonstrated exemplary skill with the Twilio Voice API!
-    `;
+    description = world.getTranslatedString('twilio_vr.programmable_voice.events.success');
   } else {
-    description = `
-      Clear all barriers and open all chests to learn more about the Voice 
-      APIs.
-    `;
+    description = world.getTranslatedString('twilio_vr.programmable_voice.events.clearAll');
   }
 
-  world.updateQuestStatus(LEVEL, TITLE, description, levelComplete);
+  world.updateQuestStatus(LEVEL, world.getTranslatedString('twilio_vr.programmable_voice.events.title'), description, levelComplete);
 };

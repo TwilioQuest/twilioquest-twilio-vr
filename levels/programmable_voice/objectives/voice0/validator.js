@@ -9,10 +9,7 @@ module.exports = async function(helper) {
   try {
     const number = await helper.findPhoneNumber(phoneNumber);
     if (!number.voiceUrl) {
-      throw `
-        Looks like you still need to set the incoming field values on 
-        your phone number: ${phoneNumberLink}.
-      `;
+      throw helper.world.getTranslatedString('twilio_vr.voice0.validator.error.incomingValues', { phoneNumberLink });
     }
 
     // Request traversable TwiML from configured webhook URL - can throw for
@@ -25,14 +22,11 @@ module.exports = async function(helper) {
 
     // Ensure the <Say> tag is present
     if ($('Response > Say').length < 1) {
-      throw `Whoops! you need to use the &lt;Say&gt; tag in your TwiML wired up to ${phoneNumberLink}.`;
+      throw helper.world.getTranslatedString('twilio_vr.voice0.validator.error.tagTwiML', { phoneNumberLink });
     }
 
-    helper.success('You are amazing!');
+    helper.success(helper.world.getTranslatedString('twilio_vr.voice0.validator.success'));
   } catch (e) {
-    handleError(e, helper, `
-      Sorry - we couldn't validate your TwiML URL - double check your
-      configuration for ${phoneNumberLink}.
-    `);
+    handleError(e, helper, helper.world.getTranslatedString('twilio_vr.voice0.validator.error.urlValidation', { phoneNumberLink }));
   }
 };

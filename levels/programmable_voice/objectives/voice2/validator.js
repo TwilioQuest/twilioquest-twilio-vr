@@ -10,10 +10,7 @@ module.exports = async function(helper) {
     const number = await helper.findPhoneNumber(phoneNumber);
 
     if (!number.voiceUrl) {
-      throw new NiceError(`
-        Looks like you still need to set the "On incoming call" field values 
-        for your phone number, ${phoneNumberLink}.
-      `);
+      throw new NiceError(helper.world.getTranslatedString('twilio_vr.voice2.validator.error.onIncomingCall', { phoneNumberLink }));
     }
     const $ = await helper.fakeCall(
       number.voiceUrl,
@@ -22,29 +19,17 @@ module.exports = async function(helper) {
       { ErrorUrl: number.voiceUrl }
     );
     if ($('Response > Say').length < 1) {
-      throw new NiceError(`
-        Whoops - you need to use the Say verb in your TwiML wired 
-        up to ${phoneNumberLink}!
-      `);
+      throw new NiceError(helper.world.getTranslatedString('twilio_vr.voice2.validator.error.sayVerb', { phoneNumberLink }));
     }
     if ($('Response > Say[voice]').length < 1) {
-      throw new NiceError(`
-        Whoops - you need to set the voice attribute in your TwiML wired 
-        up to ${phoneNumberLink}!
-      `);
+      throw new NiceError(helper.world.getTranslatedString('twilio_vr.voice2.validator.error.voiceAttribute', { phoneNumberLink }));
     }
     if ($('Response > Say[language]').length < 1) {
-      throw new NiceError(`
-        Whoops - you need to set the language attribute in your TwiML wired 
-        up to ${phoneNumberLink}!
-      `);
+      throw new NiceError(helper.world.getTranslatedString('twilio_vr.voice2.validator.error.languageAttribute', { phoneNumberLink }));
     }
 
-    helper.success('¡Muy bueno!');
+    helper.success(helper.world.getTranslatedString('twilio_vr.voice2.validator.success'));
   } catch (e) {
-    handleError(e, helper, `
-      Sorry - we're not able to validate your TwiML. Check the URL configured
-      for your number - ${phoneNumberLink}.
-    `);
+    handleError(e, helper, helper.world.getTranslatedString('twilio_vr.voice2.validator.error.TwinMLValidation', { phoneNumberLink }));
   }
 };

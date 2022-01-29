@@ -7,7 +7,7 @@ module.exports = async function(helper) {
     }">${phoneNumber}</a>`;
 
     if (!number.voiceUrl) {
-      throw `Looks like you still need to set the "On incoming call" field values for your phone number ${phoneNumberLink}.`;
+      throw helper.world.getTranslatedString('twilio_vr.voice2.validator.error.onIncomingCall', { phoneNumberLink });
     }
     const $ = await helper.fakeCall(
       number.voiceUrl,
@@ -17,11 +17,11 @@ module.exports = async function(helper) {
     
     // Find Gather
     if ($('Gather').length === 0) {
-      throw `Make sure you include the &lt;Gather&gt; verb in your TwiML wired up to ${phoneNumberLink} `;
+      throw helper.world.getTranslatedString('twilio_vr.voice7.validator.error.includeVerb', { phoneNumberLink });
     }
     // Ensure Say is nested inside
     if ($('Gather Say').length === 0) {
-      throw `Don't forget that you should nest your &lt;Say&gt; verb inside the &lt;Gather&gt; in your TwiML wired up to ${phoneNumberLink}.`;
+      throw helper.world.getTranslatedString('twilio_vr.voice7.validator.error.shouldNest', { phoneNumberLink });
     }
 
     // Grab action, if present - otherwise loop
@@ -50,15 +50,10 @@ module.exports = async function(helper) {
     });
 
     if (!found) {
-      throw `
-        After your initial Gather collects Digits, your next response (the
-        "action" for the Gather) should contain a Say tag which echoes back
-        the Digits that the caller entered. We didn't find a Say tag like
-        that in your response.
-      `;
+      throw helper.world.getTranslatedString('twilio_vr.voice7.validator.error.notSayTag');
     }
 
-    helper.success('Way to gather your thoughts!');
+    helper.success(helper.world.getTranslatedString('twilio_vr.voice7.validator.success'));
   } catch (e) {
     helper.fail(e);
   }

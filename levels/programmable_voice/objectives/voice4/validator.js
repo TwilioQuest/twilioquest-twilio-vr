@@ -8,7 +8,7 @@ module.exports = async function(helper) {
     }">${phoneNumber}</a>`;
 
     if (!number.voiceUrl) {
-      throw `Looks like you still need to set the "On incoming call" field values for your phone number ${phoneNumberLink}.`;
+      throw helper.world.getTranslatedString('twilio_vr.voice2.validator.error.onIncomingCall', { phoneNumberLink });
     }
     const $ = await helper.fakeCall(
       number.voiceUrl,
@@ -17,29 +17,25 @@ module.exports = async function(helper) {
     );
     const $plays = $('Response > Play');
     if ($plays.length < 1) {
-      throw `Whoops you need to use the Play verb in your TwiML wired up to ${phoneNumberLink}!`;
+      throw helper.world.getTranslatedString('twilio_vr.voice4.validator.error.playVerb', { phoneNumberLink });
     }
     const audioUrl = $plays
       .eq(0)
       .text()
       .trim();
     if (!audioUrl || audioUrl === '') {
-      throw 'Please make sure you include a url in your Play verb';
+      throw helper.world.getTranslatedString('twilio_vr.voice4.validator.error.urlInclude');
     }
     const response = await helper.fakeRequest(audioUrl, {}, undefined, 'GET');
     if (response.status >= 400) {
-      throw `Oh no, please link to a valid audio file. ${audioUrl} returned a ${
-        response.status
-      }.`;
+      throw helper.world.getTranslatedString('twilio_vr.voice4.validator.error.invalidAudioFile', { audioUrl, responseStatus: response.status });
     }
     const contentType = response.headers.get('Content-Type');
     if (!contentType.toLowerCase().startsWith('audio')) {
-      throw `Oh no, it looks like ${audioUrl} is not an audio file. It is of type "${contentType}"`;
+      throw helper.world.getTranslatedString('twilio_vr.voice4.validator.error.notAudioFile', { audioUrl, contentType });
     }
 
-    helper.success(`
-      You did it! We knew you would never give us up, or let us down.
-    `);
+    helper.success(helper.world.getTranslatedString('twilio_vr.voice4.validator.success'));
   } catch (e) {
     helper.fail(e);
   }

@@ -10,7 +10,7 @@ module.exports = async function(helper) {
     const number = await helper.findPhoneNumber(phoneNumber);
 
     if (!number.voiceFallbackUrl) {
-      throw `Looks like you still need to set the "Primary Handler Fails" field values for your phone number ${phoneNumberLink}.`;
+      throw helper.world.getTranslatedString('twilio_vr.voice1.validator.error.primaryHandler', { phoneNumberLink });
     }
     const $ = await helper.fakeCall(
       number.voiceFallbackUrl,
@@ -19,14 +19,11 @@ module.exports = async function(helper) {
       { ErrorUrl: number.voiceUrl }
     );
     if ($('Response > Say').length < 1) {
-      throw `Whoops you need to use the Say verb in your backup TwiML wired up to ${phoneNumberLink}!`;
+      throw helper.world.getTranslatedString('twilio_vr.voice1.validator.error.sayVerb', { phoneNumberLink });
     }
 
-    helper.success('Woohoo! Way to back that call up!');
+    helper.success(helper.world.getTranslatedString('twilio_vr.voice1.validator.success'));
   } catch (e) {
-    handleError(e, helper, `
-      We couldn't validate the TwiML for your primary handler backup. Check
-      the configuration for ${phoneNumberLink} and try again.
-    `);
+    handleError(e, helper, helper.world.getTranslatedString('twilio_vr.voice1.validator.error.TwinMLValidation', { phoneNumberLink }));
   }
 };

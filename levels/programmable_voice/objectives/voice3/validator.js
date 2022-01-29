@@ -8,7 +8,7 @@ module.exports = async function(helper) {
     }">${phoneNumber}</a>`;
 
     if (!number.voiceUrl) {
-      throw `Looks like you still need to set the "On incoming call" field values for your phone number ${phoneNumberLink}.`;
+      throw helper.world.getTranslatedString('twilio_vr.voice2.validator.error.onIncomingCall', { phoneNumberLink });
     }
     const $ = await helper.fakeCall(
       number.voiceUrl,
@@ -17,13 +17,13 @@ module.exports = async function(helper) {
       { ErrorUrl: number.voiceUrl }
     );
     if ($('Response > Say').length < 1) {
-      throw `Whoops you need to use the Say verb in your TwiML wired up to ${phoneNumberLink}!`;
+      throw helper.world.getTranslatedString('twilio_vr.voice3.validator.error.sayVerb', { phoneNumberLink });
     }
     if ($('Response > Say[loop="2"]').length < 1) {
-      throw `Whoops you need to set the loop attribute to 2 in your TwiML wired up to ${phoneNumberLink}!`;
+      throw helper.world.getTranslatedString('twilio_vr.voice3.validator.error.loopAttribute', { phoneNumberLink });
     }
 
-    helper.success('Awesome job! Awesome job!');
+    helper.success(helper.world.getTranslatedString('twilio_vr.voice3.validator.success'));
   } catch (e) {
     helper.fail(e);
   }

@@ -4,11 +4,7 @@ module.exports = async function(helper) {
   try {
     const client = helper.getTwilioClient();
     if (!messageSid) {
-      throw new Error(`
-        A message SID is required for validation 
-        - you get one of these back from an API request that creates a new 
-        MMS message.
-      `);
+      throw new Error(helper.world.getTranslatedString('twilio_vr.sms2.validator.required_sid'));
     }
 
     // First, check to see if the message was sent at all...
@@ -17,11 +13,7 @@ module.exports = async function(helper) {
 
     // Ensure it was an MMS - the SID should start with "MM"
     if (!mms.sid.startsWith('MM')) {
-      throw new Error(`
-        MMS message SIDs start with the letters "MM" - did your message SID
-        start with these letters? Regular SMS message SIDs start with the
-        letters "SM".
-      `);
+      throw new Error(helper.world.getTranslatedString('twilio_vr.sms2.validator.mms_message_mm'));
     }
 
     let successMessage = `Hooray! We found your MMS message.`;
@@ -31,7 +23,7 @@ module.exports = async function(helper) {
     if (media[0]) {
       const url = `https://api.twilio.com${media[0].uri}`.replace('.json', '');
       successMessage += `
-        Does this look familiar? <br/>
+        ${helper.world.getTranslatedString('twilio_vr.sms2.validator.look_familiar')} <br/>
         <img src="${url}" style="width:80%;margin:10px auto;display:block;"/>
       `;
     }
@@ -41,10 +33,7 @@ module.exports = async function(helper) {
   } catch (e) {
     console.log(e);
     if (e.status === 404) {
-      helper.fail(`
-        We couldn't find a message in your account with the SID you gave us.
-        Double check the SID and try again.
-      `);
+      helper.fail(helper.world.getTranslatedString('twilio_vr.sms2.validator.message_not_found'));
     } else {
       helper.fail(e.message);
     }

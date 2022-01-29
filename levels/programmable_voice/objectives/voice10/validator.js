@@ -9,7 +9,7 @@ module.exports = async function(helper) {
       number.sid
     }">${phoneNumber}</a>`;
     if (!number.voiceUrl) {
-      throw `Looks like you still need to set the "On incoming call" field values for your phone number ${phoneNumberLink}.`;
+      throw helper.world.getTranslatedString('twilio_vr.voice2.validator.error.onIncomingCall', { phoneNumberLink });
     }
 
     const $ = await helper.fakeCall(
@@ -19,17 +19,14 @@ module.exports = async function(helper) {
     );
 
     if ($('Dial').length !== 1) {
-      throw `Whoops, the TwiML attached to ${phoneNumberLink} doesn't seem to include the &lt;Dial&gt; verb`;
+      throw helper.world.getTranslatedString('twilio_vr.voice10.twiml_attached', { phoneNumberLink });
     }
 
     if (!$('Dial').text().includes(cedricNumber)) {
-      throw `
-        Ruh roh. To pass validation, your Dial tag specifically needs to dial
-        the number "${cedricNumber}".
-      `;
+      throw helper.world.getTranslatedString('twilio_vr.voice10.cedric_number', { cedricNumber });
     }
 
-    helper.success(`Woot. Very fine dialing, if you don't mind my saying so.`);
+    helper.success(helper.world.getTranslatedString('twilio_vr.voice10.success'));
   } catch (e) {
     helper.fail(e);
   }

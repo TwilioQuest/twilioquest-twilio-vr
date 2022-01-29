@@ -8,16 +8,16 @@ function isChecked(helper, fieldName) {
 module.exports = async function(helper) {
   try {
     if (isChecked(helper, 'redirect')) {
-      throw `Whoops! Remember when a redirect happens, it moves immediately to the next TwiML, the remaining lines are not executed`;
+      throw helper.world.getTranslatedString('twilio_vr.voice11.moves_to_next');
     }
     if (!isChecked(helper, 'helloWorld')) {
-      throw `Whoops, the line before the redirect would be ran. TwiML happens in order.`;
+      throw helper.world.getTranslatedString('twilio_vr.voice11.line_would_ran');
     }
     if (!isChecked(helper, 'helloCloud')) {
-      throw `Whoops this is not a trick question. &lt;Redirect&gt; can work with relative links like /hello-cloud. Hello Cloud would be said.`;
+      throw helper.world.getTranslatedString('twilio_vr.voice11.trick_question');
     }
 
-    helper.success('Way to redirect your attention to the answers!');
+    helper.success(helper.world.getTranslatedString('twilio_vr.voice11.success'));
   } catch (e) {
     helper.fail(e);
   }

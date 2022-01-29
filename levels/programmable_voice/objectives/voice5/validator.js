@@ -6,23 +6,18 @@ module.exports = async function(helper) {
   const { prefix } = helper.validationFields;
 
   if (!prefix || !prefix.startsWith('+') || prefix.length < 1) {
-    return helper.fail(`
-      Please enter the prefix you are checking for, including the leading "+"
-      sign for international formatting. e.g. "+1651"
-    `);
+    return helper.fail(helper.world.getTranslatedString('twilio_vr.voice5.validator.error.invalidPrefix'));
   }
 
   const prefixWithoutPlus = prefix.replace('+', '');
   const newPrefix = parseInt(prefixWithoutPlus);
 
   if (isNaN(newPrefix)) {
-    return helper.fail(`It looks like this prefix is not a number.`);
+    return helper.fail(helper.world.getTranslatedString('twilio_vr.voice5.validator.error.prefixNotANumber'));
   }
   
   const prefixedNumber = `${prefix}8675309`;
   const notPrefixedNumber = `+${newPrefix + 1}8675309`;
-
-
 
   try {
     const number = await helper.findPhoneNumber(phoneNumber);
@@ -31,7 +26,7 @@ module.exports = async function(helper) {
     }">${phoneNumber}</a>`;
 
     if (!number.voiceUrl) {
-      throw `Looks like you still need to set the "On incoming call" field values for your phone number ${phoneNumberLink}.`;
+      throw helper.world.getTranslatedString('twilio_vr.voice2.validator.error.onIncomingCall', { phoneNumberLink });
     }
 
     const check = num => {
@@ -40,15 +35,10 @@ module.exports = async function(helper) {
     const $sameTwiml = await check(prefixedNumber);
     const $differentTwiml = await check(notPrefixedNumber);
     if ($sameTwiml('Say').text() === $differentTwiml('Say').text()) {
-      throw `
-        Well this is awkward. I simulated a call from "${prefixedNumber}", but
-        I received the same response I got from fake-calling 
-        "${notPrefixedNumber}". Is "${prefix}" really the prefix
-        your code is checking for? Double check the function wired up 
-        to ${phoneNumberLink}!`;
+      throw helper.world.getTranslatedString('twilio_vr.voice5.validator.error.invalidSimulation', { prefixedNumber, notPrefixedNumber, prefix, phoneNumberLink });
     }
 
-    helper.success('Way to keep the fun in function!');
+    helper.success(helper.world.getTranslatedString('twilio_vr.voice5.validator.success'));
   } catch (e) {
     helper.fail(e);
   }

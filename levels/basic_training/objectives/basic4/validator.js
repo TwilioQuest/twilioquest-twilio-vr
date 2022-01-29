@@ -2,7 +2,7 @@ module.exports = (helper, callback) => {
   const phoneNumber = helper.getNormalizedInput('phoneNumber');
 
   if (!phoneNumber) {
-    return helper.fail(`Please provide a phone number in your account.`);
+    return helper.fail(helper.world.getTranslatedString('twilio_vr.basic4.validator.error.providePhone'));
   }
 
   let c;
@@ -14,10 +14,7 @@ module.exports = (helper, callback) => {
   }
 
   function respondWithError() {
-    helper.fail(`
-      We couldn't find your phone number - please try again, and make sure 
-      your phone number and Twilio credentials are correct.
-    `);
+    helper.fail(helper.world.getTranslatedString('twilio_vr.basic4.validator.error.validAccount'));
   }
 
   let found = false;
@@ -30,10 +27,7 @@ module.exports = (helper, callback) => {
       } else {
         found = true;
         return helper.success(
-          `
-            Awesome! We found this Twilio phone number in your account. 
-            We'll remember this number and use it in future challenges.
-          `,
+          helper.world.getTranslatedString('twilio_vr.basic4.validator.success'),
           [
             { name: 'TWILIO_NUMBER', value: response[0].phoneNumber },
             { name: 'TWILIO_NUMBER_SID', value: response[0].sid },

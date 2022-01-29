@@ -4,26 +4,21 @@ module.exports = async helper => {
   try {
     const client = helper.getTwilioClient();
     if (!messageSid) {
-      throw `A message SID required for validation.`;
+      throw helper.world.getTranslatedString('twilio_vr.sms3.validator.required_sid');
     }
     if (!lastStatus) {
-      throw `To validate, please enter the last status update you received at your callback URL.`;
+      throw helper.world.getTranslatedString('twilio_vr.sms3.validator.enter_status');
     }
 
     const message = await client.messages(messageSid).fetch();
     if (message.status != lastStatus) {
-      throw `Oh dear, it looks like your message's final status doesn't match what you entered.
-              Check that you're looking at the last status update you received at your callback URL.`;
+      throw helper.world.getTranslatedString('twilio_vr.sms3.validator.status_not_match');
     }
 
-    helper.success(`Amazing! Your message's last status was: "${
-      message.status
-    }", 
-                    which means you should have received a reply to your message.`);
+    helper.success(helper.world.getTranslatedString('twilio_vr.sms3.validator.success', { status: message.status }));
   } catch (e) {
     helper.fail(e, {
-      20404: `Sorry! We couldn't find a message with that SID when we looked in your Twilio account. 
-            Ensure that you're entering the correct MessageSid and try again.`,
+      20404: helper.world.getTranslatedString('twilio_vr.sms3.validator.general_error'),
     });
   }
 };

@@ -1,6 +1,5 @@
 const levelInfo = require('./level.json');
 const LEVEL = 'basic_training';
-const TITLE = 'VR Training: Twilio API Setup';
 
 module.exports = function(event, world) {
   let levelComplete = true, description = '';
@@ -12,15 +11,10 @@ module.exports = function(event, world) {
   }
 
   if (levelComplete) {
-    description = `
-      You have successfully configured your Twilio account!
-    `;
+    description = world.getTranslatedString('twilio_vr.basic_training.events.success');
   } else {
-    description = `
-      Clear all barriers, then proceed onward to learn more about key Twilio 
-      APIs.
-    `;
+    description = world.getTranslatedString('twilio_vr.basic_training.events.clearAll');
   }
 
-  world.updateQuestStatus(LEVEL, TITLE, description, levelComplete);
+  world.updateQuestStatus(LEVEL, world.getTranslatedString('twilio_vr.basic_training.events.title'), description, levelComplete);
 };

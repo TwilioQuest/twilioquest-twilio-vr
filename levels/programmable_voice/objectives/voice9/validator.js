@@ -8,7 +8,7 @@ module.exports = async function(helper) {
     }">${phoneNumber}</a>`;
 
     if (!number.voiceUrl) {
-      throw `Looks like you still need to set the "On incoming call" field values for your phone number ${phoneNumberLink}.`;
+      throw helper.world.getTranslatedString('twilio_vr.voice2.validator.error.onIncomingCall', { phoneNumberLink });
     }
     const $ = await helper.fakeCall(
       number.voiceUrl,
@@ -18,32 +18,30 @@ module.exports = async function(helper) {
 
     // Find Gather
     if ($('Gather').length === 0) {
-      throw `Make sure you include the &lt;Gather&gt; verb in your TwiML wired up to ${phoneNumberLink}`;
+      throw helper.world.getTranslatedString('twilio_vr.voice7.validator.error.includeVerb', { phoneNumberLink });
     }
     // Ensure Say is nested inside
     if ($('Gather Say').length === 0) {
-      throw `Don't forget that you should nest your &lt;Say&gt; verb inside the &lt;Gather&gt; verb in your TwiML wired up to ${phoneNumberLink}.`;
+      throw helper.world.getTranslatedString('twilio_vr.voice7.validator.error.shouldNest', { phoneNumberLink });
     }
     // Grab action
     const actionUrl = $('Gather').attr('action');
     if (!actionUrl) {
-      throw 'Whoops make sure you define an action attribute that points to your function that handles the response.';
+      throw helper.world.getTranslatedString('twilio_vr.voice9.define_action');
     }
     // Grab input
     const input = $('Gather').attr('input');
     if (!input || input !== 'speech') {
-      throw `
-        In order to gather speech you need to set the input parameter to "speech" in the TwiML wired up to ${phoneNumberLink}
-      `;
+      throw helper.world.getTranslatedString('twilio_vr.voice9.gather_speech', { phoneNumberLink });
     }
     const words = ['agent', 'hours', 'reset'];
     let hints = $('Gather').attr('hints');
     if (!hints) {
-      throw `Make sure you set comma separated hints of what is expected in the TwiML wired up to ${phoneNumberLink}`;
+      throw helper.world.getTranslatedString('twilio_vr.voice9.comma_separated', { phoneNumberLink });
     }
     hints = hints.split(',').map(hint => hint.toLowerCase().trim());
     if (hints.length < 3) {
-      throw `I expected at least 3 hints, something like ${words.join(',')}`;
+      throw helper.world.getTranslatedString('twilio_vr.voice9.expected_hints', { hints: words.join(',') });
     }
     // Run action with 3 diff digits and verify all different...
     const calls = words.map(word =>
@@ -57,16 +55,12 @@ module.exports = async function(helper) {
     for (let i = 0; i < words.length; i++) {
       for (let j = i + 1; j < words.length; j++) {
         if ($responses[i].text() === $responses[j].text()) {
-          throw `
-            Hmmm...when I called and entered a '${words[i]}', 
-            I got the same response as I did when I entered with '${words[j]}'. 
-            That's not right, is it?
-          `;
+          throw helper.world.getTranslatedString('twilio_vr.voice9.compare_words', { enteredWords: words[i], compareWords: words[j] });
         }
       }
     }
 
-    helper.success('Way to protect your freedom of speech!');
+    helper.success(helper.world.getTranslatedString('twilio_vr.voice9.success'));
   } catch (e) {
     helper.fail(e);
   }

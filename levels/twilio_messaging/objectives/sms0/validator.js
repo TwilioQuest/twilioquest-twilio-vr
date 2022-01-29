@@ -4,20 +4,18 @@ module.exports = async helper => {
   try {
     const client = helper.getTwilioClient();
     if (!messageSid) {
-      throw `A message SID is required for validation - 
-        you get one of these back from an API request that creates a new SMS message.`;
+      throw helper.world.getTranslatedString('twilio_vr.sms0.validator.required_sid');
     }
 
     const message = await client.messages(messageSid).fetch();
-    if (message.body === 'I wanna dance with somebody!') {
-      throw `Don't take our word for it! Change your message body value to your own words!`;
+    if (message.body === helper.world.getTranslatedString('twilio_vr.sms0.validator.dance')) {
+      throw helper.world.getTranslatedString('twilio_vr.sms0.validator.dont_take_our_word');
     }
 
-    helper.success(`Woohoo! You sent this message: "${message.body}"`);
+    helper.success(helper.world.getTranslatedString('twilio_vr.sms0.validator.success', { message: message.body }));
   } catch (e) {
     helper.fail(e, {
-      20404: `Sorry! We couldn't find a message with that SID when we looked in your Twilio account. 
-            Ensure that your message SID is correct and try again.`,
+      20404: helper.world.getTranslatedString('twilio_vr.sms0.validator.sid_error'),
     });
   }
 };

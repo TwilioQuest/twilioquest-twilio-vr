@@ -2,15 +2,11 @@ module.exports = async function(helper) {
   try {
     const number = await helper.findPhoneNumber(helper.env.TQ_TWILIO_NUMBER);
     if (!number.smsUrl) {
-      throw 'Did you configure your Phone Number under "A Message Comes In"?';
+      throw helper.world.getTranslatedString('twilio_vr.sms7.validator.configure_phone');
     }
 
     if (!number.smsUrl.includes('twil.io')) {
-      throw `
-        It looks like your SMS URL is not on the <strong>twil.io</strong>
-        domain that hosts Functions. Is your SMS handler URL really a Twilio
-        Function?
-      `;
+      throw helper.world.getTranslatedString('twilio_vr.sms7.validator.missing_url');
     }
 
     const $ = await helper.fakeMessage(
@@ -19,10 +15,10 @@ module.exports = async function(helper) {
       '+15033088404'
     );
     if ($('Response > Message').length < 1) {
-      throw "Don't forget to use MessagingResponse and message in your TwiML!";
+      throw helper.world.getTranslatedString('twilio_vr.sms7.validator.use_message_response');
     }
 
-    helper.success('My sources say that you passed!');
+    helper.success(helper.world.getTranslatedString('twilio_vr.sms7.validator.success'));
   } catch (e) {
     helper.fail(e);
   }

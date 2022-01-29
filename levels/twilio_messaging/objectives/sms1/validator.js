@@ -8,15 +8,10 @@ module.exports = async helper => {
         msg.body.toLowerCase().includes('twilioquest rules')
     );
     if (!found) {
-      throw `We couldn't find a reply message in your last 100 messages that contained the text "TwilioQuest rules" 
-              - did you send this message as a REPLY from TwiML?`;
+      throw helper.world.getTranslatedString('twilio_vr.sms1.validator.reply_not_found');
     }
 
-    helper.success(
-      `Boom! You did it! You sent a reply message containing the text "${
-        found.body
-      }"`
-    );
+    helper.success(helper.world.getTranslatedString('twilio_vr.sms1.validator.success', { found: found.body }));
   } catch (e) {
     helper.fail(e);
   }

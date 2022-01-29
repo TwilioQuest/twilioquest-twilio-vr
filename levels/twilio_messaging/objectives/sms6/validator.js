@@ -8,7 +8,7 @@ module.exports = async function(helper) {
   try {
     const number = await helper.findPhoneNumber(helper.env.TQ_TWILIO_NUMBER);
     if (!number.smsUrl) {
-      throw 'Looks like you still need to set the incoming field values on your phone number.';
+      throw helper.world.getTranslatedString('twilio_vr.sms6.validator.missing_fields');
     }
     const $ = await helper.fakeMessage(
       number.smsUrl,
@@ -17,16 +17,16 @@ module.exports = async function(helper) {
       requestParams
     );
     if ($('Response > Message[to]').length === 0) {
-      throw 'Oops, looks like you need to use a "to" attribute in your TwiML';
+      throw helper.world.getTranslatedString('twilio_vr.sms6.validator.to_attribute');
     }
     if (
       !$.text().includes(requestParams.From) ||
       !$.text().includes(requestParams.Body)
     ) {
-      throw 'Oops, did you include both {{From}} and {{Body}} templating in your TwiML?';
+      throw helper.world.getTranslatedString('twilio_vr.sms6.validator.include_from_body');
     }
 
-    helper.success('You did it!');
+    helper.success(helper.world.getTranslatedString('twilio_vr.sms5.validator.you_dit_it'));
   } catch (e) {
     helper.fail(e);
   }

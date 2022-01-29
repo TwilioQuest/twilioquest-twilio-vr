@@ -3,10 +3,7 @@ module.exports = async function(helper) {
     const number = await helper.findPhoneNumber(helper.env.TQ_TWILIO_NUMBER);
 
     if (!number.smsFallbackUrl) {
-      throw `
-        Looks like you still need to set the "Primary Handler Fails" 
-        field values for your phone number.
-      `;
+      throw helper.world.getTranslatedString('twilio_vr.sms4.validator.set_primary_handles');
     }
 
     const $twiml = await helper.fakeMessage(
@@ -17,10 +14,10 @@ module.exports = async function(helper) {
     );
 
     if ($twiml('Response > Message').length < 1) {
-      throw 'Whoops! you need to use the &lt;Message&gt; verb in your TwiML!';
+      throw helper.world.getTranslatedString('twilio_vr.sms4.validator.use_message_verb');
     }
 
-    helper.success('See? Safety <i>is</i> cool.');
+    helper.success(helper.world.getTranslatedString('twilio_vr.sms4.validator.success'));
   } catch (e) {
     helper.fail(e);
   }

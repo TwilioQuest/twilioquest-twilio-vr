@@ -9,7 +9,7 @@ module.exports = async function(helper) {
     }">${phoneNumber}</a>`;
 
     if (!number.voiceUrl) {
-      throw `Looks like you still need to set the "On incoming call" field values for your phone number ${phoneNumberLink}.`;
+      throw helper.world.getTranslatedString('twilio_vr.voice2.validator.error.onIncomingCall', { phoneNumberLink });
     }
     const $ = await helper.fakeCall(
       number.voiceUrl,
@@ -19,20 +19,18 @@ module.exports = async function(helper) {
 
     // Find Gather
     if ($('Gather').length === 0) {
-      throw `Make sure you include the &lt;Gather&gt; verb in your TwiML wired up to ${phoneNumberLink}`;
+      throw helper.world.getTranslatedString('twilio_vr.voice7.validator.error.includeVerb', { phoneNumberLink });
     }
     // Ensure Say is nested inside
     if ($('Gather Say').length === 0) {
-      throw `Don't forget that you should nest your &lt;Say&gt; verb inside the &lt;Gather&gt; verb in your TwiML wired up to ${phoneNumberLink}.`;
+      throw helper.world.getTranslatedString('twilio_vr.voice7.validator.error.shouldNest', { phoneNumberLink });
     }
     // Grab numDigits
     if ($('Gather[numdigits="4"]').length === 0) {
-      throw 'Whoops make sure you set an attribute named `numDigits` to "4"';
+      throw helper.world.getTranslatedString('twilio_vr.voice8.validator.error.numDigits');
     }
 
-    helper.success(
-      'Great job improving that user experience by limiting input!'
-    );
+    helper.success(helper.world.getTranslatedString('twilio_vr.voice8.validator.success'));
   } catch (e) {
     helper.fail(e);
   }

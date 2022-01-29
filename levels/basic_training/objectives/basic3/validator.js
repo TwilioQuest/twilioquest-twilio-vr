@@ -1,12 +1,10 @@
 const twilio = require('twilio');
 
-module.exports = (context, callback) => {
-  const { accountSid, authToken } = context.validationFields;
+module.exports = (helper) => {
+  const { accountSid, authToken } = helper.validationFields;
 
   if (!accountSid || !authToken) {
-    return callback({
-      message: `An account SID and auth token are required - please enter them in the text fields provided.`,
-    });
+    return helper.fail(helper.world.getTranslatedString('twilio_vr.basic3.validator.error.accountRequired'));
   }
 
   let c;
@@ -14,25 +12,21 @@ module.exports = (context, callback) => {
   try {
     c = twilio(accountSid, authToken);
   } catch (e) {
-    return callback({
-      message: `A valid Twilio account SID is required - you'll find this at twilio.com/console, and it starts with an "AC"`,
-    });
+    return helper.fail(helper.world.getTranslatedString('twilio_vr.basic4.validator.error.validAccount'));
   }
 
   c.api.accounts(accountSid).fetch((err, response) => {
     console.log(err, response);
     if (err) {
-      callback({
-        message: `We couldn't verify your Twilio credentials - ensure they are correct and try again.`,
-      });
+      helper.fail(helper.world.getTranslatedString('twilio_vr.basic4.validator.error.notValidCredentials'));
     } else {
-      callback(null, {
-        message: `Awesome! Your credentials look good. We'll save these for later.`,
-        env: [
+      helper.success(
+        helper.world.getTranslatedString('twilio_vr.basic3.validator.success'),
+        [
           { name: 'TWILIO_ACCOUNT_SID', value: accountSid },
           { name: 'TWILIO_AUTH_TOKEN', value: authToken, concealed: true },
-        ],
-      });
+        ]
+      );
     }
   });
 };

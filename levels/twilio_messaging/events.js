@@ -1,6 +1,5 @@
 const levelInfo = require('./level.json');
 const LEVEL = 'twilio_messaging';
-const TITLE = 'VR Training: Twilio Messaging';
 
 module.exports = function(event, world) {
   let levelComplete = true, description = '';
@@ -12,15 +11,10 @@ module.exports = function(event, world) {
   }
 
   if (levelComplete) {
-    description = `
-      You have demonstrated exemplary skill with the Twilio Messaging API!
-    `;
+    description = world.getTranslatedString('twilio_vr.basic_training.events.success');
   } else {
-    description = `
-      Clear all barriers and open all chests to learn more about the Messaging 
-      APIs.
-    `;
+    description = world.getTranslatedString('twilio_vr.basic_training.events.clear_barriers');
   }
 
-  world.updateQuestStatus(LEVEL, TITLE, description, levelComplete);
+  world.updateQuestStatus(LEVEL, world.getTranslatedString('twilio_vr.basic_training.events.title'), description, levelComplete);
 };
