@@ -135,5 +135,6 @@ module.exports = {
   "twilio_vr.sms8.validator.success": "You Redirection skills are strong!",
   "twilio_vr.messaging.events.api_skills": "You have demonstrated exemplary skill with the Twilio Messaging API!",
   "twilio_vr.messaging.events.clear_barriers": "Clear all barriers and open all chests to learn more about the Messaging APIs.",
-  "twilio_vr.messaging.events.title": "VR Training: Twilio Messaging"
+  "twilio_vr.messaging.events.title": "VR Training: Twilio Messaging",
+  "twilio_vr.messaging.sms2.validator.success": "Hooray! We found your MMS message."
 }
