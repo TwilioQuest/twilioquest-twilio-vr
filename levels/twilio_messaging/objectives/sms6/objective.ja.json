@@ -1,0 +1,16 @@
+{
+  "title": "Messagingの基本: SMSを別の番号に転送する",
+  "description": "「to」属性とTwiML Binのテンプレートを使用し、着信メッセージを別の番号に転送します。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "指示に従いTwilio番号からのメッセージに応答するために使用しているTwiML Binを変更し、[HACK]をクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

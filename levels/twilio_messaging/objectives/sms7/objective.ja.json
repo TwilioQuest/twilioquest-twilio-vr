@@ -1,0 +1,15 @@
+{
+  "title": "Messagingの基本: Twilio関数での応答",
+  "description": "Twilio関数をセットアップし、着信SMSに返信します。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "オブジェクティブの指示どおりにTwilio番号を設定し、[HACK]を押して検証します。"
+    }
+  ],
+  "rewards": {
+    "xp": 250
+  }
+}

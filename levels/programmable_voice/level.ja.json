@@ -1,0 +1,27 @@
+{
+  "title": "Twilio Voice API",
+  "description": "Twilio APIを使用して電話をかけたり受けたりする方法を習得します。",
+  "is_mission": true,
+  "priority": 3,
+  "backgroundMusic": "hackertheme_104771b",
+  "mission_icon": "voice_icon.png",
+  "prereqs": [
+    "basic_training.basic4"
+  ],
+  "backgroundEffect": {
+    "key": "vr",
+    "options": {}
+  },
+  "flavorTextOverrides": {},
+  "objectives": [
+    "voice0",
+    "voice1",
+    "voice2",
+    "voice3",
+    "voice4",
+    "voice5",
+    "voice6",
+    "voice7",
+    "voice10"
+  ]
+}

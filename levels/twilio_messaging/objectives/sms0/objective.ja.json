@@ -1,0 +1,16 @@
+{
+  "title": "Messagingの基本: テキストメッセージの送信",
+  "description": "Twilio APIを使用して最初のSMSメッセージを送信します。",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "messageSid",
+      "type": "text",
+      "placeholder": "SMXXXX",
+      "label": "アカウントから送信されたメッセージのSIDを入力します:"
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

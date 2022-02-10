@@ -1,0 +1,37 @@
+{
+  "title": "Programmable Voice: <Redirect>",
+  "description": "アプリケーションフローを新しいパスにリダイレクトします",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "適用するすべてのフィールドに、Xを1つ置いてください"
+    },
+    {
+      "name": "helloWorld",
+      "type": "text",
+      "placeholder": "",
+      "label": "Hello World!"
+    },
+    {
+      "name": "redirect",
+      "type": "text",
+      "placeholder": "",
+      "label": "リダイレクトが発生しました"
+    },
+    {
+      "name": "helloCloud",
+      "type": "text",
+      "placeholder": "",
+      "label": "Hello Cloud!"
+    }
+  ],
+  "rewards": {
+    "xp": 0,
+    "items": [
+      "roller_skates"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Twilio APIのセットアップ: アカウントのクレデンシャル",
+  "description": "TwilioQuestが、Twilioアカウントのクレデンシャルを使用してTwilio APIの課題の進行状況を検証できるようにします。",
+  "validation_fields": [
+    {
+      "name": "accountSid",
+      "type": "text",
+      "placeholder": "ACxxx",
+      "label": "TwilioのアカウントSID:"
+    },
+    {
+      "name": "authToken",
+      "type": "password",
+      "placeholder": "",
+      "label": "Twilio認証トークン:"
+    }
+  ],
+  "rewards": {
+    "xp": 200,
+    "items": [
+      "operator_armor_body",
+      "operator_armor_boots"
+    ]
+  }
+}
