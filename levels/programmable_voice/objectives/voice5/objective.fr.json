@@ -1,0 +1,16 @@
+{
+  "title": "Programmable Voice: Jonction de fonctions",
+  "description": "Créez une fonction sans serveur pour exécuter un code dynamique selon le préfixe de l'appelant",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prefix",
+      "type": "text",
+      "placeholder": "+1555",
+      "label": "Saisissez le préfixe que vous recherchez dans votre fonction:"
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: Utilisation du tag Play",
+  "description": "Utilisez le tag TwiML <strong>&lt;Play&gt;</strong> pour lire un fichier audio pendant un appel.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Configurez votre numéro Twilio comme indiqué dans l'objectif. Cliquez sur le bouton «HACK» pour valider votre travail."
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": [
+      "white_cat_ears"
+    ]
+  }
+}

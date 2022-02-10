@@ -1,0 +1,16 @@
+{
+  "title": "Les fondamentaux de la messagerie: Envoyer un message texte",
+  "description": "Envoyez votre premier SMS à l'aide de l'API Twilio.",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "messageSid",
+      "type": "text",
+      "placeholder": "SMXXXX",
+      "label": "Saisissez le SID d'un message envoyé depuis votre compte:"
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

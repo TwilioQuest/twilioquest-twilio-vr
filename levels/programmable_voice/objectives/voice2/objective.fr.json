@@ -1,0 +1,16 @@
+{
+  "title": "Programmable Voice: Utiliser des langues différentes",
+  "description": "Utilisez des langues parlées autres que l'anglais dans vos applications vocales.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Lorsque vous avez configuré votre numéro de téléphone comme indiqué dans l'objectif, cliquez sur le bouton «HACK»."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

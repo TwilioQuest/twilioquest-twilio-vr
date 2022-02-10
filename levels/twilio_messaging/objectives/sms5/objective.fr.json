@@ -1,0 +1,18 @@
+{
+  "title": "Les fondamentaux de la messagerie: Répondre avec un TwiML Bin",
+  "description": "Répondre à un message SMS entrant à l'aide d'un TwiML Bin",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "Une fois que vous avez configuré votre numéro TwilioQuest pour répondre aux messages entrants à l'aide d'un TwiML Bin, cliquez sur le bouton « HACK »."
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": [
+      "2_and_a_half_hearts"
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+# Tag \<Redirect>
+
+Utilisez la balise `<Redirect>` TwiML ([docs](https://www.twilio.com/docs/sms/twiml/redirect)) pour transférer le contrôle d'une réponse de message vers une autre URL. Cela est très utile lorsque vous générez TwiML de manière dynamique à partir d'une application Web et que vous souhaitez que Twilio redirige la requête de webhook vers un autre itinéraire.
+
+Pour atteindre cet objectif, \[configurez votre numéro Twilio](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID ? env.TQ_TWILIO_NUMBER_SID.value : '' %>) avec un gestionnaire qui utilise le tag `<Redirect>` TwiML. Pour ce faire, utilisez votre propre code, l'**éditeur de code**, un [TwiML Bin](https://www.twilio.com/console/twiml-bins) ou une [fonction](https://www.twilio.com/console/functions/manage). Une fois que votre numéro est configuré avec une URL qui renvoie TwiML contenant le tag `<Redirect>`, cliquez sur le bouton *HACK* et nous vérifierons que vous allez dans la bonne direction.
