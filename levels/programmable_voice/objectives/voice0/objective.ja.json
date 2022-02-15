@@ -1,0 +1,16 @@
+{
+  "title": "Programmable Voice: Hello, World!",
+  "description": "音声通話の着信に応答し、TTS(テキストを音声に変換）機能を利用して「Hello」と言います。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Objectiveの指示どおりにTwilio番号を設定、[HACK]ボタンをクリックし、検証します。"
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

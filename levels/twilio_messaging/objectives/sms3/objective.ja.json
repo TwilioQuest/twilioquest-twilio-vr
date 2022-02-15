@@ -1,0 +1,25 @@
+{
+  "title": "Messagingの基本: ステータスコールバック",
+  "description": "ステータスコールバックを設定し、メッセージ配信を追跡します。",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "messageSid",
+      "type": "text",
+      "placeholder": "SMXXXX",
+      "label": "メッセージSIDを入力してください。"
+    },
+    {
+      "name": "lastStatus",
+      "type": "text",
+      "placeholder": "some_status",
+      "label": "コンソールに出力された最終ステータスを入力してください。"
+    }
+  ],
+  "rewards": {
+    "xp": 250,
+    "items": [
+      "short_message_sabre"
+    ]
+  }
+}

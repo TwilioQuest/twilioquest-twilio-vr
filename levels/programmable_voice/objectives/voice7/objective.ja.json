@@ -1,0 +1,16 @@
+{
+  "title": "Programmable Voice: <Gather>による入力収集",
+  "description": "通話中にユーザーの入力を収集するには、発信者がキーを押した際に有線で送信されるタッチトーンを使用します。",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Objectiveの指示どおりに自分の電話番号を設定し、[HACK]を押し、検証します。"
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

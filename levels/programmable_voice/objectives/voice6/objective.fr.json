@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: Templates dans les TwiML Bins",
+  "description": "Créez une TwiML Bin qui utilise des templates Mustache pour dicter un comportement dynamique particulier à votre TwiML.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Configurez votre numéro Twilio comme indiqué dans l'objectif, puis cliquez sur le bouton «HACK»."
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": [
+      "gauntlet_of_empowerment"
+    ]
+  }
+}

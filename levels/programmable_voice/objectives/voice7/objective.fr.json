@@ -1,0 +1,16 @@
+{
+  "title": "Programmable Voice: Collecter des données avec <Gather>",
+  "description": "Collectez les données soumises par l'appelant grâce aux tonalités des touches sur lesquelles il a appuyé et qui ont été envoyées par réseau filaire pendant un appel.",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Configurez votre numéro de téléphone comme indiqué dans l'objectif, puis appuyez sur «HACK» pour valider."
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

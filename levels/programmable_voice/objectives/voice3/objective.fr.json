@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: Attribut de boucle",
+  "description": "Utilisez l'attribut de <strong>boucle</strong> du tag <strong>&lt;Say&gt;</strong> pour répéter votre message.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Lorsque vous avez configuré votre numéro Twilio comme indiqué dans l'objectif, cliquez sur le bouton «HACK»."
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": [
+      "surf_glasses"
+    ]
+  }
+}

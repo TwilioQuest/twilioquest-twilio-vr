@@ -1,0 +1,16 @@
+{
+  "title": "Les fondamentaux de la messagerie: Configurer un gestionnaire de fallback",
+  "description": "Configurez un fallback principal pour SMS, au cas où.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Configurez votre numéro Twilio comme indiqué dans l'Objectif et cliquez sur le bouton «HACK» pour valider."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

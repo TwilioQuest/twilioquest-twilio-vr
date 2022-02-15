@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: スピーチの収集",
+  "description": "通話の会話部分を収集します",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "一部の会話を収集し、次に[HACK]ボタンを押します"
+    }
+  ],
+  "rewards": {
+    "xp": 0,
+    "items": [
+      "bunny_mask"
+    ]
+  }
+}

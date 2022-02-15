@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: <Gather>の入力制限",
+  "description": "",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "収集される数字の桁数を制限し、HACKしましょう!"
+    }
+  ],
+  "rewards": {
+    "xp": 0,
+    "items": [
+      "3_hearts"
+    ]
+  }
+}
