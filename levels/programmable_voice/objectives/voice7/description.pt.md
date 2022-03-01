@@ -1,4 +1,4 @@
-# Rodada de \<Gather>
+# Rodada de <Gather>
 
 Use a tag `<Gather>` ([docs](https://www.twilio.com/docs/voice/twiml/gather)) (documentos) para coletar a entrada do usuário por meio de tons [DTMF](https://www.twilio.com/docs/glossary/what-is-dtmf) (tons de toque do teclado). Depois de coletar a entrada, o TwiML retornado pelo URL `action` para sua tag `<Gather>` deve então **repeat back** (repetir) os `Digits` que foram inseridos pelo usuário em uma tag `<Say>`.
 

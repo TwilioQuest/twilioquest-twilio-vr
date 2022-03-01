@@ -42,7 +42,7 @@ Todos os verbos do Voice TwiML são expostos externamente ao objeto `VoiceRespon
 </details>
 ## Verificar se funciona
 
-Conecte a função ao número de entrada (\<%= env.TQ_TWILIO_NUMBER.value %>) e ligue para ele usando o número do remetente de spam suspeito. Você deve ouvir o sinal de ocupado. Agora, ligue de outro número. Você deve ouvir a mensagem falada.
+Conecte a função ao número de entrada (<%= env.TQ_TWILIO_NUMBER.value %>) e ligue para ele usando o número do remetente de spam suspeito. Você deve ouvir o sinal de ocupado. Agora, ligue de outro número. Você deve ouvir a mensagem falada.
 
 Depois disso, insira o número do remetente de spam e pressione o botão **HACK**.
 

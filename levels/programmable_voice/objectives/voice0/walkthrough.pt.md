@@ -48,7 +48,7 @@ Você provavelmente notou a declaração `<?xml` na parte superior do trecho do 
 
 Agora que sabemos qual é o TwiML que precisamos, vamos conectá-lo ao seu número de telefone para que ele seja executado quando uma chamada for recebida.
 
-Acesse a [seção do número de telefone no console](https://www.twilio.com/console/phone-numbers/incoming) e escolha o número \<%= env.TQ_TWILIO_NUMBER.value %>.
+Acesse a [seção do número de telefone no console](https://www.twilio.com/console/phone-numbers/incoming) e escolha o número <%= env.TQ_TWILIO_NUMBER.value %>.
 
 Na seção **Voz e fax**, você verá um prompt denominado **Chamada recebida** seguido por dois campos. Você tem algumas opções aqui...
 
@@ -68,6 +68,6 @@ Clique no botão **Create** (Criar) para salvar seu TwiML Bin e, em seguida, esc
 
 ## Ligue para si mesmo
 
-Agora que você tem um número de telefone \[\<%= env.TQ_TWILIO_NUMBER.value %>](https://www.twilio.com/console/phone-numbers/\<%= env.TQ_TWILIO_NUMBER_SID.value %>) completamente configurado, você deve ligar para ele. Olá, mundo, mesmo!
+Agora que você tem um número de telefone [<%= env.TQ_TWILIO_NUMBER.value %>](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID.value %>) completamente configurado, você deve ligar para ele. Olá, mundo, mesmo!
 
 Por que você não pressiona o botão **HACK** para que possamos ajudá-lo a atravessar essa barreira e chegar na próxima!

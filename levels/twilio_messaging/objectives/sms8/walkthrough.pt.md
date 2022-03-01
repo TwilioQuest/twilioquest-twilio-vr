@@ -1,4 +1,4 @@
-# O uso do verbo \<Redirecionar>
+# O uso do verbo <Redirecionar>
 
 O TwiML de mensagens tem mais um truque na manga: O verbo `<Redirect>`. Para adquirir o espólio dentro deste baú, você passará o controle de uma resposta de mensagem a uma segunda URL de webhook que também retornará TwiML.
 

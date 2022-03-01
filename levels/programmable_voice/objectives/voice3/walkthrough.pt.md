@@ -12,7 +12,7 @@ Vamos tentar. Vamos preparar o TwiML para repetir a frase: **Tudo o que vale a p
 
 E, é claro, vamos dizer isso... duas vezes.
 
-Para seu \[manipulador de chamadas recebidas](https://www.twilio.com/console/phone-numbers/\<%= env.TQ_TWILIO_NUMBER_SID.value %>), verifique se o TwiML que você retornar usará o valor `loop`.
+Para seu [manipulador de chamadas recebidas](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID.value %>), verifique se o TwiML que você retornar usará o valor `loop`.
 
 Se precisar de ajuda, clique para abrir o spoiler abaixo.
 
@@ -30,6 +30,6 @@ Não se esqueça de **Save** (Salvar) suas configurações de número de telefon
 
 ## Faça o teste
 
-Ligue para seu número de telefone (\<%= env.TQ_TWILIO_NUMBER.value %>). Se você ouvir a citação duas vezes, você conseguiu!
+Ligue para seu número de telefone (<%= env.TQ_TWILIO_NUMBER.value %>). Se você ouvir a citação duas vezes, você conseguiu!
 
 Agora, pressione o botão **HACK** para que possamos arrombar esse baú e continuar sua jornada!

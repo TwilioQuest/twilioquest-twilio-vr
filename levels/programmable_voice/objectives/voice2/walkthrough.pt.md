@@ -36,10 +36,10 @@ Para especificar uma voz no seu TwiML, você precisará usar o atributo **voz**.
 </Response>
 ```
 
-Escreva o código acima em um novo TwiML Bin e \[conecte-o ao manipulador de chamadas recebidas no seu número](https://www.twilio.com/console/phone-numbers/\<%= env.TQ_TWILIO_NUMBER_SID.value %>)
+Escreva o código acima em um novo TwiML Bin e [conecte-o ao manipulador de chamadas recebidas no seu número](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID.value %>)
 
 ## Ouça sua nova voz
 
-Ligue para seu número de telefone (\<%= env.TQ_TWILIO_NUMBER.value %>). Mucho gusto Miguel! Hola mundo, de fato!
+Ligue para seu número de telefone (<%= env.TQ_TWILIO_NUMBER.value %>). Mucho gusto Miguel! Hola mundo, de fato!
 
 Agora pressione o botão **HACK** para que possamos ajudar você a atravessar essa barreira e seguir para sua próxima aventura!

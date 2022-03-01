@@ -16,7 +16,7 @@ O Twilio fornece essa funcionalidade para você em chamadas recebidas.
 
 ## Criar um fallback
 
-Na tela de edição do seu \[\<%= env.TQ_TWILIO_NUMBER.value %> número de telefone](https://www.twilio.com/console/phone-numbers/\<%= env.TQ_TWILIO_NUMBER_SID.value %>), na seção **Voz e fax**, você verá um campo identificado como `Primary Handler Fails`. Escolha TwiML no primeiro menu suspenso e crie um novo TwiML Bin clicando no botão de adição nessa linha.
+Na tela de edição do seu [<%= env.TQ_TWILIO_NUMBER.value %> número de telefone](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID.value %>), na seção **Voz e fax**, você verá um campo identificado como `Primary Handler Fails`. Escolha TwiML no primeiro menu suspenso e crie um novo TwiML Bin clicando no botão de adição nessa linha.
 
 Nomeie o seu TwiML Bin como `Please Call Again`. Adicione algum TwiML no corpo para fazer a conversão do texto em fala, portanto:
 

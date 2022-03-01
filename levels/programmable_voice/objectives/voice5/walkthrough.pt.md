@@ -199,7 +199,7 @@ Você pode tornar esse código específico para qualquer prefixo que esteja veri
 
 **Save** (Salve) sua função e você verá que ela foi implantada em nossos servidores.
 
-Acesse seu \[número de entrada](https://www.twilio.com/console/phone-numbers/\<%= env.TQ_TWILIO_NUMBER_SID.value %>) e, na seção **Call comes in** (Chamada recebida), selecione **Function** (função) e escolha a função **Prefix Checker** (Verificador de prefixo).
+Acesse seu [número de entrada](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID.value %>) e, na seção **Call comes in** (Chamada recebida), selecione **Function** (função) e escolha a função **Prefix Checker** (Verificador de prefixo).
 
 Faça uma chamada com um número que corresponda ao seu prefixo esperado. Você deve ouvir sua mensagem. Agora faça uma chamada que não corresponda ao seu prefixo.
 

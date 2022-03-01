@@ -1,4 +1,4 @@
-# \<Dial>
+# <Dial>
 
 É possível fazer uma chamada externa no seu aplicativo usando o verbo `<Dial>` do TwiML. Um caso de uso comum é usar essa funcionalidade para o encaminhamento de chamadas.
 

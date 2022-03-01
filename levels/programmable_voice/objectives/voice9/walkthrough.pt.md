@@ -103,6 +103,6 @@ OBSERVAÇÃO: Como `console.log` está na ramificação `default` da instrução
 </details>
 ## Verificar se funciona
 
-Conecte seu \[número de telefone de entrada (\<%= env.TQ_TWILIO_NUMBER.value %>)](https://www.twilio.com/console/phone-numbers/\<%= env.TQ_TWILIO_NUMBER_SID.value %>) ao seu TwiML Bin e faça uma chamada para ele. Responda usando cada uma das diferentes opções. Você obtém a resposta correta sempre? Lembre-se de que, se você estiver tendo problemas, verifique seus logs para ver a transcrição.
+Conecte seu [número de telefone de entrada (<%= env.TQ_TWILIO_NUMBER.value %>)](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID.value %>) ao seu TwiML Bin e faça uma chamada para ele. Responda usando cada uma das diferentes opções. Você obtém a resposta correta sempre? Lembre-se de que, se você estiver tendo problemas, verifique seus logs para ver a transcrição.
 
 Assim que estiver satisfeito com os resultados, pressione o botão HACK!

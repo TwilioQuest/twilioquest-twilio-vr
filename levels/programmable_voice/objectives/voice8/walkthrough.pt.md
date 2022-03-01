@@ -28,6 +28,6 @@ Vamos avisar nosso autor da chamada dizendo "digite seu pin de quatro dígitos".
 </details>
 ## Verifique se está funcionando
 
-Conecte esse TwiML Bin ao manipulador "Chamada recebida" do seu número ( \[\<%= env.TQ_TWILIO_NUMBER.value %>](https://www.twilio.com/console/phone-numbers/\<%= env.TQ_TWILIO_NUMBER_SID.value %>) ). Faça uma chamada e insira os quatro dígitos. Você notará que criamos esse temido loop `<Gather>` porque nunca declaramos uma `action`. Não se desespere com esse baú, mas lembre-se de que não realizar nenhuma ação implica em criar um loop caso encontre este problema novamente!
+Conecte esse TwiML Bin ao manipulador "Chamada recebida" do seu número ( [<%= env.TQ_TWILIO_NUMBER.value %>](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID.value %>) ). Faça uma chamada e insira os quatro dígitos. Você notará que criamos esse temido loop `<Gather>` porque nunca declaramos uma `action`. Não se desespere com esse baú, mas lembre-se de que não realizar nenhuma ação implica em criar um loop caso encontre este problema novamente!
 
 Pressione o botão **HACK** para pegar sua parte!

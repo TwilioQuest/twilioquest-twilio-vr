@@ -58,7 +58,7 @@ Na parte superior da página do bin que você acabou de criar, você encontrará
 
 ## Conectar o URL
 
-Localize seu \[número de telefone](https://www.twilio.com/console/phone-numbers/\<%= env.TQ_TWILIO_NUMBER_SID.value %>).
+Localize seu [número de telefone](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID.value %>).
 
 Na seção **Voz e fax**, em **A Call Comes In** (Chamada recebida), selecione **Webhook** e cole no seu URL do TwiML Bin.
 
@@ -68,7 +68,7 @@ Não se esqueça de **Salvar** seu número de telefone com as alterações.
 
 ## Ligue para si mesmo
 
-Agora ligue para o seu número de telefone (\<%= env.TQ_TWILIO_NUMBER.value %>). Você deve ouvir seu nome e, em seguida, uma leitura muito boba de seu número de telefone.
+Agora ligue para o seu número de telefone (<%= env.TQ_TWILIO_NUMBER.value %>). Você deve ouvir seu nome e, em seguida, uma leitura muito boba de seu número de telefone.
 
 Você fez um ótimo trabalho usando modelos para fazer sua mensagem mudar dinamicamente! Pressione o botão **HACK** quando estiver pronto para arrasar!
 

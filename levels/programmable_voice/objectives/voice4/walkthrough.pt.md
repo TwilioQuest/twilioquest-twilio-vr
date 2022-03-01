@@ -22,7 +22,7 @@ Arraste e solte o arquivo de áudio que deseja usar em qualquer lugar da página
 
 ## Conectar tudo
 
-Modifique o TwiML retornado pela sua \[chamada recebida](https://www.twilio.com/console/phone-numbers/\<%= env.TQ_TWILIO_NUMBER_SID.value %>) para usar a nova palavra-chave `<Play>`. Se você ainda não carregou um arquivo de áudio próprio, temos uma demonstração clássica em mp3 que você pode usar.
+Modifique o TwiML retornado pela sua [chamada recebida](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID.value %>) para usar a nova palavra-chave `<Play>`. Se você ainda não carregou um arquivo de áudio próprio, temos uma demonstração clássica em mp3 que você pode usar.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -31,6 +31,6 @@ Modifique o TwiML retornado pela sua \[chamada recebida](https://www.twilio.com/
 </Response>
 ```
 
-Ligue para seu número de telefone (\<%= env.TQ_TWILIO_NUMBER.value %>). Verifique se o arquivo de áudio é reproduzido. Pronto!
+Ligue para seu número de telefone (<%= env.TQ_TWILIO_NUMBER.value %>). Verifique se o arquivo de áudio é reproduzido. Pronto!
 
 Agora, pressione o botão **HACK** para que possamos arrombar esse baú e continuar sua jornada!
