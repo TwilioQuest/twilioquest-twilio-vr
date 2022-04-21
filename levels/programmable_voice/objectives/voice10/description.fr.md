@@ -1,0 +1,7 @@
+# Transferts \<Dial>
+
+Configurez \[votre numéro de téléphone](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID ? env.TQ_TWILIO_NUMBER_SID.value : '' %>) pour transférer un appel entrant vers `+19473334160`. Utilisez le tag `<Dial>` ([docs](https://www.twilio.com/docs/voice/twiml/dial)) à cet effet. Nous vous avons fourni un modèle d'application que vous pouvez utiliser dans l'**éditeur de code**, mais cette fois-ci, voyons si vous pouvez remplir vous-même les espaces vides. Vous pouvez également relever ce défi avec votre propre code ou des Bins TwiML.
+
+Pour réussir la validation, votre [URL Voice du numéro de téléphone](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID ? env.TQ_TWILIO_NUMBER_SID.value : '' %>) doit renvoyer le TwiML qui utilise le tag `Dial` pour transférer un appel à `+19473334160`. Elle DOIT composer ce numéro spécifique. Lorsque votre application est prête, appuyez sur le bouton *HACK*.
+
+**REMARQUE&nbsp;:** Les comptes d'essai peuvent uniquement appeler des [numéros vérifiés](https://www.twilio.com/console/phone-numbers/verified). Cependant, vous pouvez toujours écrire une application qui renvoie TwiML pour relever ce défi.

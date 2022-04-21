@@ -1,0 +1,16 @@
+{
+  "title": "Principes de base de la messagerie: Transférer un SMS vers un autre numéro",
+  "description": "Utilisez l'attribut «to» et le templating dans un TwiML Bin pour transférer un message entrant vers un numéro différent.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Modifiez le TwiML Bin que vous utilisez pour répondre aux messages de votre numéro Twilio comme indiqué, puis cliquez sur «HACK»."
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

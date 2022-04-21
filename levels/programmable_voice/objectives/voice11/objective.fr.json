@@ -1,0 +1,37 @@
+{
+  "title": "Programmable Voice: <Redirect>",
+  "description": "Redirigez le flux de votre application vers un nouveau chemin",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Placez un X dans tous les champs applicables"
+    },
+    {
+      "name": "helloWorld",
+      "type": "text",
+      "placeholder": "",
+      "label": "Hello World!"
+    },
+    {
+      "name": "redirect",
+      "type": "text",
+      "placeholder": "",
+      "label": "Une redirection s'est produite"
+    },
+    {
+      "name": "helloCloud",
+      "type": "text",
+      "placeholder": "",
+      "label": "Hello Cloud!"
+    }
+  ],
+  "rewards": {
+    "xp": 0,
+    "items": [
+      "roller_skates"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: Gestionnaires de fallback",
+  "description": "Configurez un gestionnaire de fallback en cas d'échec de votre gestionnaire principal.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Configurez le gestionnaire de fallback de votre numéro Twilio pour Voice, puis cliquez sur «HACK» pour le valider."
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": [
+      "unicorn_horn"
+    ]
+  }
+}

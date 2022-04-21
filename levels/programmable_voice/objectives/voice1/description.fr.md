@@ -1,0 +1,5 @@
+# Un gestionnaire averti
+
+Pour remplir cet objectif, [configurez votre numéro de téléphone](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID ? env.TQ_TWILIO_NUMBER_SID.value : '' %>) pour disposer d'un gestionnaire de fallback pour les appels vocaux en cas d'échec du gestionnaire principal. Il est toujours plus prudent d'avoir un «&nbsp;Plan B&nbsp;».
+
+Les [TwiML Bins](https://www.twilio.com/console/twiml-bins) constituent un plan de secours pratique et fiable. Utilisez le tag TwiML `<Say>` de votre TwiML pour répondre aux appelants en leur indiquant que votre application rencontre des difficultés. Une fois que vous avez configuré votre numéro avec une solution alternative fiable, cliquez sur le bouton *HACK*. Si tout est correct, nous vous offrirons un petit boost d'<i>XP</i>.

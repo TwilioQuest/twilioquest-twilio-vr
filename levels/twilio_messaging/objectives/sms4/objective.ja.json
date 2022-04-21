@@ -1,0 +1,16 @@
+{
+  "title": "Messagingの基本: フォールバックハンドラーの設定",
+  "description": "万が一に備え、SMSのプライマリフォールバックを設定します。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "オブジェクティブの指示どおりにTwilio番号を設定して、[HACK]ボタンをクリックし、検証します。"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}

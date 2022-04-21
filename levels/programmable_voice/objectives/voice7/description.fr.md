@@ -1,0 +1,5 @@
+# Au tour de \<Gather>
+
+Utilisez le tag `<Gather>` ([docs](https://www.twilio.com/docs/voice/twiml/gather)) pour collecter les données saisies par l'utilisateur via les tonalités [DTMF](https://www.twilio.com/docs/glossary/what-is-dtmf) (touches sonores du clavier). Une fois les entrées collectées, le fichier TwiML renvoyé par l'URL `action` de votre tag `<Gather>` doit ensuite **répéter** les `Digits` saisis par l'utilisateur dans un tag `<Say>`.
+
+Le code qui met en œuvre ce comportement vous a été fourni dans l'**éditeur de code**. Appuyez sur <em><i class="fa fa-play"></i></em> dans l'éditeur pour exécuter l'application. Vous pouvez également relever ce défi avec des fonctions, des fichiers TwiML ou votre propre code. Assurez-vous simplement que [votre numéro de téléphone est configuré](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID ? env.TQ_TWILIO_NUMBER_SID.value : '' %>) pour utiliser l'URL appropriée.

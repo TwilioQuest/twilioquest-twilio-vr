@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: <Reject>",
+  "description": "電話番号に基づき発信者を拒否します",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "rejectedNumber",
+      "type": "text",
+      "placeholder": "+12095550136",
+      "label": "コードにより拒否と指定する番号です"
+    }
+  ],
+  "rewards": {
+    "xp": 0,
+    "items": [
+      "orange_flame"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Les fondamentauxPrincipes de base de la messagerie: Répondre aux SMS entrants",
+  "description": "Utilisez les webhooks et TwiML pour répondre à un SMS entrant.",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "testPrompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Lorsque vous avez répondu à un SMS entrant avec le texte 'TwilioQuest rules', appuyez sur le bouton HACK pour valider."
+    }
+  ],
+  "rewards": {
+    "xp": 200,
+    "items": [
+      "3_hearts"
+    ]
+  }
+}

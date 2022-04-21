@@ -1,0 +1,16 @@
+{
+  "title": "Programmable Voice: Hello, World!",
+  "description": "Répondez à un appel téléphonique entrant et utilisez la fonction de synthèse vocale Text-to-Speech pour dire «Hello».",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Configurez votre numéro Twilio comme indiqué dans l'objectif, puis cliquez sur le bouton «HACK» pour valider."
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

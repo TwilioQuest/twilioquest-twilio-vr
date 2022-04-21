@@ -1,0 +1,5 @@
+# Bin voilà&nbsp;!
+
+Lorsque vous recevez un SMS entrant sur votre numéro Twilio, vous pouvez indiquer à Twilio comment vous souhaitez répondre à l'aide de [TwiML](https://www.twilio.com/docs/sms/twiml). Vous pouvez générer TwiML de manière dynamique à partir de votre propre serveur, mais vous pouvez également utiliser un [TwiML Bin](https://www.twilio.com/console/twiml-bins) afin de configurer rapidement des instructions pour les réponses qui ne nécessitent pas beaucoup de logique au niveau du backend.
+
+Pour atteindre cet objectif, [configurez votre numéro Twilio](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID ? env.TQ_TWILIO_NUMBER_SID.value : '' %>) pour utiliser un TwiML Bin afin de renvoyer une réponse simple à l'aide du tag TwiML `<Message>`. Le contenu du message peut correspondre à ce que vous voulez. Une fois que vous avez configuré votre numéro pour répondre aux messages entrants à l'aide des instructions de votre TwiML Bin, cliquez sur le bouton *HACK*. Nous allons vérifier votre numéro pour nous assurer qu'il fonctionne&nbsp;!

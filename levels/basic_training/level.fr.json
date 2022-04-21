@@ -1,0 +1,19 @@
+{
+  "title": "Configuration de l'API Twilio",
+  "description": "Commencez ici pour configurer votre compte Twilio et apprendre à utiliser les API Twilio!",
+  "questTitle": "Configuration de l'API Twilio",
+  "questDescription": "Configurez vos informations d'identification de l'API, puis consultez l'API de messagerie!",
+  "mission_icon": "twilio_fundamentals_icon.png",
+  "is_mission": true,
+  "priority": 1,
+  "backgroundMusic": "hackertheme_104771b",
+  "backgroundEffect": {
+    "key": "vr",
+    "options": {}
+  },
+  "flavorTextOverrides": {},
+  "objectives": [
+    "basic3",
+    "basic4"
+  ]
+}

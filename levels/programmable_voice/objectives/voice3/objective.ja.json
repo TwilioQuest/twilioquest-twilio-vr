@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: loop属性",
+  "description": "<strong>&lt;Say&gt;</strong>タグの<strong>loop</strong>属性を使用し、メッセージを繰り返します。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Objectiveの指示どおりにTwilio番号を設定し、[HACK]ボタンをクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": [
+      "surf_glasses"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+# Le monde vous appelle… Dites-lui «&nbsp;Hello&nbsp;»&nbsp;!
+
+Votre première tâche avec l'[API Programmable Voice](https://www.twilio.com/docs/voice) sera de \[configurer votre numéro Twilio](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID ? env.TQ_TWILIO_NUMBER_SID.value : '' %>) pour répondre aux appels entrants. Lorsque votre numéro reçoit un appel entrant, Twilio envoie une requête HTTP à une URL que vous devez \[indiquer dans la page de configuration de votre numéro de téléphone](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID ? env.TQ_TWILIO_NUMBER_SID.value : '' %>). Cette URL doit ensuite renvoyer un [TwiML](https://www.twilio.com/docs/voice/twiml) en réponse pour donner des instructions à Twilio sur la façon de traiter l'appel entrant.
+
+Dans cet objectif, utilisez un [TwiML Bin](https://www.twilio.com/console/twiml-bins) pour écrire un fichier TwiML qui utilise le tag TwiML `<Say>` ([docs](https://www.twilio.com/docs/voice/twiml/say)) afin d'énoncer la phrase `"Hello World!"` à votre appelant. \[Configurez votre numéro Twilio](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID ? env.TQ_TWILIO_NUMBER_SID.value : '' %>) pour utiliser ce TwiML Bin pour traiter les appels entrants.
+
+Ensuite, allez donc dire bonjour à quelques points d'XP&nbsp;!

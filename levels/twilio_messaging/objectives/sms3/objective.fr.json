@@ -1,0 +1,25 @@
+{
+  "title": "Principes de base de la messagerie: Callbacks du statut",
+  "description": "Configurez les callbacks de statut pour suivre l'envoi des messages.",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "messageSid",
+      "type": "text",
+      "placeholder": "SMXXXX",
+      "label": "Saisissez le SID de votre message."
+    },
+    {
+      "name": "lastStatus",
+      "type": "text",
+      "placeholder": "some_status",
+      "label": "Saisissez le dernier état que vous avez reçu et affiché sur la console:"
+    }
+  ],
+  "rewards": {
+    "xp": 250,
+    "items": [
+      "short_message_sabre"
+    ]
+  }
+}

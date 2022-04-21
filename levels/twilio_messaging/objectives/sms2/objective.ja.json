@@ -1,0 +1,19 @@
+{
+  "title": "Messagingの基本: MMSメッセージの送信",
+  "description": "Twilio APIを使用して最初のMMSメッセージを送信します。",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "messageSid",
+      "type": "text",
+      "placeholder": "MMXXXX",
+      "label": "アカウントから送信されたMMSのメッセージSIDを入力します:"
+    }
+  ],
+  "rewards": {
+    "xp": 200,
+    "items": [
+      "arm_blaster"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Fondamentaux de la messagerie: Le tag <Redirect>",
+  "description": "Utilisez le tag TwiML <strong>&lt;Redirect&gt;</strong> pour transférer le contrôle d'un message vers une autre URL.",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Configurez votre numéro Twilio comme indiqué dans l'objectif, puis cliquez sur le bouton «HACK»."
+    }
+  ],
+  "rewards": {
+    "xp": 150
+  }
+}

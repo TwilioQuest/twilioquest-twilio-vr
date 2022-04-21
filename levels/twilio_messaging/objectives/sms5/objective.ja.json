@@ -1,0 +1,18 @@
+{
+  "title": "Messagingの基本: TwiML Binを使用した応答",
+  "description": "TwiML Binを使用して着信SMSメッセージに応答する",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "label": "TwiMLを使用して着信メッセージに応答するようにTwilioQuestに登録している番号をセットアップしたら、[HACK]ボタンをクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": [
+      "2_and_a_half_hearts"
+    ]
+  }
+}

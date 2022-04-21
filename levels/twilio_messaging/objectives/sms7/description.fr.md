@@ -1,0 +1,5 @@
+# Ainsi font, font, font, les fonctions&nbsp;!
+
+Les[ Twilio Functions](https://www.twilio.com/console/functions/manage) vous permettent d'écrire du code [Node.js](https://nodejs.org/en/) qui s'exécute dans l'infrastructure de Twilio. Vous pouvez utiliser les Functions pour créer une réponse TwiML dynamique pour les messages entrants.
+
+La section **Aide** contient un exemple de code pour générer une fonction [Boule magique numéro 8](https://en.wikipedia.org/wiki/Magic_8-Ball) basée sur SMS. Déployez ce code en tant que [fonction Twilio Function](https://www.twilio.com/console/functions/manage), et \[configurez votre numéro Twilio](https://www.twilio.com/console/phone-numbers/<%= env.TQ_TWILIO_NUMBER_SID ? env.TQ_TWILIO_NUMBER_SID.value : '' %>) pour gérer les messages entrants à l'aide de cette fonction. Une fois que vous avez déployé votre fonction Boule magique numéro 8 et que vous l'avez testée, cliquez sur le bouton *HACK*. Vous allez sans aucun doute relever ce défi haut la main.

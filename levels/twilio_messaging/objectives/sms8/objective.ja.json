@@ -1,0 +1,16 @@
+{
+  "title": "Messagingの基本: <Redirect>タグ",
+  "description": "<strong>&lt;Redirect&gt;</strong> TwiMLタグを使用し、メッセージのコントロールを別のURLに転送します。",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "オブジェクティブの指示どおりにTwilio番号を設定し、[HACK]ボタンをクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 150
+  }
+}

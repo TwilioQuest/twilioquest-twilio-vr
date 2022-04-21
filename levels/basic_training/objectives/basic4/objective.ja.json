@@ -1,0 +1,19 @@
+{
+  "title": "Twilio APIのセットアップ: 番号を取得",
+  "description": "Twilioコンソールを使用し、プログラム可能な電話番号を取得します。",
+  "validation_fields": [
+    {
+      "name": "phoneNumber",
+      "type": "text",
+      "placeholder": "+16518675309",
+      "label": "Twilio電話番号をE.164形式で入力します:"
+    }
+  ],
+  "rewards": {
+    "xp": 200,
+    "items": [
+      "operator_armor_legs",
+      "operator_armor_head"
+    ]
+  }
+}

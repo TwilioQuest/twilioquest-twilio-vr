@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: TwiML Binのテンプレート",
+  "description": "TwiML Binを作成するには、Mustacheテンプレートを使いTwiMLに動的な動作を追加します。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Objectiveの指示どおりにTwilio番号を設定し、[HACK]ボタンをクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": [
+      "gauntlet_of_empowerment"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Configuration de l'API Twilio: Informations d'identification du compte",
+  "description": "Autorisez TwilioQuest à valider votre progression pour les défis de l'API Twilio à l'aide de vos informations d'identification de compte Twilio.",
+  "validation_fields": [
+    {
+      "name": "accountSid",
+      "type": "text",
+      "placeholder": "ACxxx",
+      "label": "Votre Account SID Twilio:"
+    },
+    {
+      "name": "authToken",
+      "type": "password",
+      "placeholder": "",
+      "label": "Votre Auth Token Twilio:"
+    }
+  ],
+  "rewards": {
+    "xp": 200,
+    "items": [
+      "operator_armor_body",
+      "operator_armor_boots"
+    ]
+  }
+}

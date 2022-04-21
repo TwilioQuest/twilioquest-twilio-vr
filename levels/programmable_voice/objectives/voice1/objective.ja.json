@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: フォールバックハンドラー",
+  "description": "プライマリハンドラーが失敗した場合に備え、フォールバックハンドラーを設定します。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "音声用にTwilio番号のフォールバック ハンドラーを設定し、[HACK]をクリックし、検証します。"
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": [
+      "unicorn_horn"
+    ]
+  }
+}

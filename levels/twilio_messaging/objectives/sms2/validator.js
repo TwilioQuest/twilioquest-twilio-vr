@@ -16,7 +16,7 @@ module.exports = async function(helper) {
       throw new Error(helper.world.getTranslatedString('twilio_vr.sms2.validator.mms_message_mm'));
     }
 
-    let successMessage = `Hooray! We found your MMS message.`;
+    let successMessage = helper.world.getTranslatedString('twilio_vr.messaging.sms2.validator.success');
 
     // Try and fetch the media for the message, if it has been created
     const media = await client.messages(messageSid).media.list();

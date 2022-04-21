@@ -1,0 +1,19 @@
+{
+  "title": "Twilio APIのセットアップ",
+  "description": "Twilioアカウントを設定し、ここからTwilio APIの使用方法について学んでいきましょう。",
+  "questTitle": "Twilio APIのセットアップ",
+  "questDescription": "APIクレデンシャルを設定し、メッセージングAPIを確認します。",
+  "mission_icon": "twilio_fundamentals_icon.png",
+  "is_mission": true,
+  "priority": 1,
+  "backgroundMusic": "hackertheme_104771b",
+  "backgroundEffect": {
+    "key": "vr",
+    "options": {}
+  },
+  "flavorTextOverrides": {},
+  "objectives": [
+    "basic3",
+    "basic4"
+  ]
+}

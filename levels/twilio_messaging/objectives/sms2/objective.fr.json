@@ -1,0 +1,19 @@
+{
+  "title": "Les fondamentaux de la messagerie: Envoyer un message MMS",
+  "description": "Envoyez votre premier MMS à l'aide de l'API Twilio.",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "messageSid",
+      "type": "text",
+      "placeholder": "MMXXXX",
+      "label": "Saisissez le message SID d'un MMS envoyé depuis votre compte:"
+    }
+  ],
+  "rewards": {
+    "xp": 200,
+    "items": [
+      "arm_blaster"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Configuration de l'API Twilio: Obtenir un numéro",
+  "description": "À l'aide de la console Twilio, obtenez un numéro de téléphone programmable.",
+  "validation_fields": [
+    {
+      "name": "phoneNumber",
+      "type": "text",
+      "placeholder": "+16518675309",
+      "label": "Saisissez votre numéro de téléphone Twilio, au format E.164:"
+    }
+  ],
+  "rewards": {
+    "xp": 200,
+    "items": [
+      "operator_armor_legs",
+      "operator_armor_head"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: <Dial>による着信の転送",
+  "description": "&lt;Dial&gt;タグを使用し、着信を別の電話番号に転送します。",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Objectiveの指示どおりにTwilio番号を設定し、[HACK]ボタンをクリックします。"
+    }
+  ],
+  "rewards": {
+    "xp": 200,
+    "items": [
+      "doggo_side_kick"
+    ]
+  }
+}

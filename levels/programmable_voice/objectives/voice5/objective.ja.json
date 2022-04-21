@@ -1,0 +1,16 @@
+{
+  "title": "Programmable Voice: 関数ジャンクション",
+  "description": "サーバーレス関数を作成し、発信者のプリフィックスに基づき、動的なコードを実行します。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prefix",
+      "type": "text",
+      "placeholder": "+1555",
+      "label": "関数で確認するプリフィックスを入力します。"
+    }
+  ],
+  "rewards": {
+    "xp": 200
+  }
+}

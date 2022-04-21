@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: Collecte de données vocales (Gather speech)",
+  "description": "Collectez les données vocales d'un appel",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Collectez les données vocales, puis appuyez sur ce bon vieux bouton HACK."
+    }
+  ],
+  "rewards": {
+    "xp": 0,
+    "items": [
+      "bunny_mask"
+    ]
+  }
+}

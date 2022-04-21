@@ -1,0 +1,19 @@
+{
+  "title": "Messagingの基本: 着信SMSへの応答",
+  "description": "webhookとTwiMLを使用し、着信SMSメッセージに応答します。",
+  "show_ide": true,
+  "validation_fields": [
+    {
+      "name": "testPrompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "着信SMSに対してテキスト「TwilioQuest最高」を応答し、[HACK]ボタンを押して検証します。"
+    }
+  ],
+  "rewards": {
+    "xp": 200,
+    "items": [
+      "3_hearts"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: Limitez l'entrée pour <Gather>",
+  "description": "",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Limitez les chiffres collectés, et HACKEZ!"
+    }
+  ],
+  "rewards": {
+    "xp": 0,
+    "items": [
+      "3_hearts"
+    ]
+  }
+}

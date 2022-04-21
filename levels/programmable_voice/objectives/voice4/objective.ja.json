@@ -1,0 +1,19 @@
+{
+  "title": "Programmable Voice: Playタグの使用",
+  "description": "<strong>&lt;Play&gt;</strong> TwiMLタグを使用し、通話中に音声ファイルを再生します。",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "prompt",
+      "type": "prompt",
+      "placeholder": "",
+      "label": "Objectiveの指示どおりにTwilio番号を設定します。[HACK]ボタンをクリックし、作業内容を確認します。"
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": [
+      "white_cat_ears"
+    ]
+  }
+}
