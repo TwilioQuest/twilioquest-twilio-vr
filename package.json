@@ -1,7 +1,7 @@
 {
   "name": "twilioquest-twilio-vr",
   "description": "This is a TwilioQuest extension for the Twilio VR content.",
-  "version": "2.0.0-translations.beta.1",
+  "version": "2.0.0-translations.beta.2",
   "engines": {
     "twilioquest": "3.2.0"
   },
